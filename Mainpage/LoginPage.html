@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link rel="stylesheet" href="../css/LoginPage.css">
+	<script src="../js/LoginPage.js"></script>
+</head>
+<body>
+	<div id="Welcome">
+		<div style="font-size: 30px;">Welcome to GIC !!!</div>
+		<div class="GICintrobtn" onmouseover="GICshow()" onmouseout="GIChide()">what is GIC</div>
+		<div class="signin" onclick="ShowLogin()">Sign In</div>
+	</div>
+	<div id="GICintro">
+		GIC is a short for "Game Introduction and Comments", You can get the information of any games that you wanna know here.
+	</div>
+	<div id="LoginPart">
+		<div class="logoPart"><img class="profile" src="../images/logo2.png"></div>
+		<div class="NameInput">
+			<label for="name">用户名：</label>
+			<input class="username" placeholder="USERNAME" type="text">
+		</div>
+		<div class="PwdInput">
+			<label for="password">密&nbsp;&nbsp;码：</label>
+			<input class="pwd" placeholder="PASSWORD" type="password">
+		</div>	
+			<input style="background-color: grey;" class="loginbutton" type="button" value="Sign in" onclick="LoginFunction()">
+		<div id="RegisterBtn" onclick="ShowReg()">No account? Get one!</div>
+	</div>
+	<div id="Register">
+		<div style="text-align: center; font-size: 30px; margin-top: 40px;">
+            Sign Up
+        </div>
+        <div style="margin-left: 40px; margin-top: 40px;">
+            <label for="username">用户名：</label>
+            <input id="suusername" type="text" placeholder="USERNAME">
+        </div>
+        <div style="margin-left: 40px; margin-top: 40px;">
+            <label for="password">密&nbsp;&nbsp;码：</label>
+            <input id="supwd" type="password" placeholder="PASSWORD">
+        </div>
+        <div style="margin-left: 40px; margin-top: 40px;">
+            <label for="repwd">确认密码：</label>
+            <input id="copwd" type="password" placeholder="CONFIG PASSWORD">
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <button type="button" class="SuBtn" onclick="window.alert('Sign up successfully!')">Sign Up</button>
+        </div>
+		<div id="BacktoLogin" onclick="HideReg()">Go back to sign in</div>
+	</div>
+</body>
+</html>

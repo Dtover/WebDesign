@@ -1,0 +1,171 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+	color: black;
+	outline: none;
+	transition: 0.2s;
+}
+a:hover{
+	color: grey;
+}
+body{
+	z-index: -1;
+	width: 1450px;
+}
+.sidenav{
+	height: 100%;
+	width: 220px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgba(25, 25, 25, 0.8);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+.sidenav a{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+.plco{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #909090;
+}
+.plco:hover{
+	cursor: pointer;
+	color: #f1f1f1;
+}
+#PfBar a, #CpBar a{
+	font-size: 20px;
+	color: #606060;
+}
+
+.sidenav a:hover, .offcanvas a:hover{
+	color: #f1f1f1;
+}
+
+#PfBar{
+	width: 250px;
+	height: 160px;
+	margin-left: 20px;
+	margin-top: 5px;
+	overflow-x: hidden;
+	transition: 0.4s;
+}
+#PfBar a:hover, #CpBar a:hover{
+	color: #f1f1f1;
+}
+#CpBar{
+	width: 250px;
+	height: 160px;
+	margin-top: 5px;
+	margin-left: 20px;
+	overflow-x: hidden;
+	transition: 0.4s;
+}
+.BGP{
+	background: url("../images/40.jpg") no-repeat;
+	background-size: 1450px auto;
+	width: 1450px;
+	height: 500px;
+}
+.profile{
+	width: 150px;
+	height: 150px;
+	display: flex;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	margin-left: 650px;
+	margin-top: -80px;
+}
+.Username{
+ 	font-size: 25px; 
+	font-weight: bold;
+	margin-left: 645px;
+}
+.Word{
+	margin-top: 5px;
+	margin-left: 640px;
+	font-size: 16px;
+	color: grey;
+}
+.LC{
+	margin-left: 420px;
+	font-size: 20px;
+}
+.LC div{
+	float: left;
+	line-height: 35px;
+	text-align: center;
+	border: 2px solid rgba(25, 25, 25, 0.8);
+	width: 300px;
+	height: 35px;
+	transition: 0.3s;
+}
+.LC div:hover{
+	cursor: pointer !important;
+	color: white !important;
+	background-color: rgba(25, 25, 25, 0.8) !important;
+}
+.btnvisited{
+	float: left;
+	line-height: 35px;
+	text-align: center;
+	border: 2px solid rgba(25, 25, 25, 0.8);
+	width: 300px;
+	height: 35px;
+	transition: 0.3s;
+	cursor: pointer;
+	color: white;
+	background-color: rgba(25, 25, 25, 0.8);
+}
+#commentbtn{
+	margin-left: 20px;
+}
+.ContentPart>div{
+	width: 800px;	
+	height: 800px;
+	margin-left: 350px;
+	margin-top: 80px;
+}
+#LGames{
+	display: none;
+}
+#LGames>a{
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	box-shadow: 0px 0px 3px grey;
+	width: 240px;
+	height: 120px;
+	transition: 0.2s;
+}
+#LGames>a:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 8px grey;
+	color: black;
+}
+#Comment{
+	display: block;
+}
+#Comment>div{
+	float: left;
+	width: 750px;
+	height: 100px;
+	margin-top: 20px;
+	margin-left: 20px;
+	background-color: grey;
+}

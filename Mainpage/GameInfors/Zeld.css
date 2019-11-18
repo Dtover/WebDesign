@@ -1,0 +1,230 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+	color: black;
+	outline: none;
+	transition: 0.2s;
+}
+a:hover{
+	color: grey;
+}
+body{
+	z-index: -1;
+	width: 1450px;
+}
+.sidenav{
+	height: 100%;
+	width: 220px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgba(25, 25, 25, 0.8);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+.sidenav a{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+.plco{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #909090;
+}
+.plco:hover{
+	cursor: pointer;
+	color: #f1f1f1;
+}
+#PfBar a, #CpBar a{
+	font-size: 20px;
+	color: #606060;
+}
+
+.sidenav a:hover, .offcanvas a:hover{
+	color: #f1f1f1;
+}
+
+#PfBar{
+	width: 250px;
+	height: 160px;
+	margin-left: 20px;
+	margin-top: 5px;
+	overflow-x: hidden;
+	transition: 0.4s;
+}
+#PfBar a:hover, #CpBar a:hover{
+	color: #f1f1f1;
+}
+#CpBar{
+	width: 250px;
+	height: 160px;
+	margin-top: 5px;
+	margin-left: 20px;
+	overflow-x: hidden;
+	transition: 0.4s;
+}
+#MenuBtn{
+	float: left;
+	position: fixed;
+	z-index: 3;
+	transition: 0.5s; 
+	font-size:30px; 
+	cursor:pointer; 
+	margin-left: 220px;
+}
+.PicChanging{
+	margin-left: 350px;
+	margin-top: 100px;
+	float: left;
+	width: 600px;
+	height: 400px;
+	background-color: black;
+	border-radius: 10px;
+}
+.PicShowPart{
+	margin-top: 5%;
+	float: left;
+	width: 600px;
+	height: 380px;
+}
+.ControlPart{
+	float: left;
+	width: 600px;
+	height: 60px;
+	background-color: rgba(25, 25, 25, 0.1);
+	border-radius: 8px;
+}
+.CP{
+	float: left;
+	width: 100px;		
+	height: 56px;
+	border: 2px solid rgba(25, 25, 25, 0.1);
+	margin-left: 40px;
+	background-color: grey;
+}
+.CP:hover{
+	cursor: pointer;
+}
+#CP1{
+	background: url("./images/01.jpg") no-repeat;
+	border: 2px solid black;
+	background-size: 100px auto;
+	opacity: 1;
+	transition: 0.3s;
+}
+#CP1:hover{
+	opacity: 1 !important;
+}
+#CP2{
+	background: url("./images/02.jpg") no-repeat;
+	background-size: 100px auto;
+	opacity: 0.6;
+	transition: 0.3s;
+}
+#CP2:hover{
+	opacity: 1 !important;
+}
+#CP3{
+	background: url("./images/03.jpg") no-repeat;
+	background-size: 100px auto;
+	opacity: 0.6;
+	transition: 0.3s;
+}
+#CP3:hover{
+	opacity: 1 !important;
+}
+#CP4{
+	background: url("./images/04.jpg") no-repeat;
+	background-size: 100px auto;
+	opacity: 0.6;
+	transition: 0.3s;
+}
+#CP4:hover{
+	opacity: 1 !important;
+}
+.GameInfor{
+	float: right;
+	margin-right: 100px;
+	margin-top: 100px;
+	width: 300px;
+	height: 800px;
+}
+.BriefPic{
+	width: 300px;
+	height: 168px;
+	border: 2px solid white;
+	border-radius: 2px;
+}
+.GameTextIntro{
+	margin-top: 100px;
+	width: 600px;
+	height: 400px;
+	margin-left: 350px;
+	float: left;
+}
+.BriefInfor{
+	width: 300px;
+	height: 120px;
+	background-color: white;
+}
+.GameTags{
+	width: 300px;
+	height: 300px;
+}
+.GameTags span{
+	padding:2px 8px 2px 8px;
+	border-radius: 10px;
+	font-size: 13px;
+	color: rgb(25, 25, 25);
+	border: 1px solid rgba(25, 25, 25, 0.4);
+}
+.GameTags span:hover{
+	cursor: pointer;
+}
+.Btn{
+	margin-top: 10px;
+	width: 250px;
+	height: 30px;
+	border-radius: 10px;
+	border: 2px solid grey;
+	background-color: white;
+	text-align: center;
+	line-height: 30px;
+	transition: 0.2s;
+}
+.Btn:hover{
+	cursor: pointer;
+	background-color: grey;
+	color: white;
+}
+.RelatedGames{
+	width: 500px;
+	height: 300px;
+	float: left;
+	margin-left: 350px;
+}
+.RGame{
+	width: 200px;
+	height: 100px;
+	margin-left: 50px;
+	float: left;
+	box-shadow: 0px 0px 3px grey;
+	margin-top: 20px;
+	transition: 0.3s;
+}
+.RGame:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 8px grey;
+	color: black;
+}

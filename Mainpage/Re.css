@@ -1,0 +1,60 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+#suusername, #supwd, #copwd{
+	border: 0px;
+	border-radius: 3px;
+	height: 25px;
+	background-color: #efefef;
+}
+#suusername::-webkit-input-placeholder,
+#supwd::-webkit-input-placeholder,
+#copwd::-webkit-input-placeholder{
+	color: #efefef;
+}
+#suusername:focus::-webkit-input-placeholder,
+#supwd:focus::-webkit-input-placeholder,
+#copwd:focus::-webkit-input-placeholder{
+	color: #aaa;
+
+}
+label{
+	cursor: pointer;
+	display: inline-block;
+	padding: 3px 6px;
+	text-align: right;
+	width: 150px;
+	vertical-align: top;
+}
+#Register{
+    float: left;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(120, 120, 120, 0.5);
+    top: 140px;
+    left: 475px;
+}
+#BacktoLogin{
+    float: right;
+	margin-top: 100px;
+	margin-right: 20px;
+}
+#BacktoLogin:hover{
+    cursor: pointer;
+    color: white;
+}
+.SuBtn{
+	background-color: grey;
+	width: 100px;
+	height: 30px;
+	border: 0px;
+	border-radius: 3px;
+	transition: .3s;
+}
+.SuBtn:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 3px grey;
+}

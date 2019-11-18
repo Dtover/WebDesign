@@ -1,0 +1,270 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+	color: black;
+	outline: none;
+}
+body{
+	background:url("../images/40.jpg") top no-repeat fixed; 
+	z-index: -1;
+	background-size: cover;
+}
+.sidenav{
+	height: 100%;
+	width: 0px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgba(25, 25, 25, 0.8);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+.sidenav a{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+.plco{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #909090;
+}
+.plco:hover{
+	cursor: pointer;
+	color: #f1f1f1;
+}
+#PfBar a, #CpBar a{
+	font-size: 20px;
+	color: #606060;
+}
+
+.sidenav a:hover, .offcanvas a:hover{
+	color: #f1f1f1;
+}
+
+#PfBar{
+	width: 250px;
+	height: 0px;
+	margin-left: 20px;
+	margin-top: 5px;
+	overflow-x: hidden;
+	transition: 0.4s;
+}
+#PfBar a:hover, #CpBar a:hover{
+	color: #f1f1f1;
+}
+#CpBar{
+	width: 250px;
+	height: 0px;
+	margin-top: 5px;
+	margin-left: 20px;
+	overflow-x: hidden;
+	transition: 0.4s;
+}
+#MenuBtn{
+	float: left;
+	position: fixed;
+	z-index: 3;
+	transition: 0.5s; 
+	font-size:30px; 
+	cursor:pointer; 
+	margin-left: 0px;
+}
+#MenuBtn:hover{
+	color: #f1f1f1;
+}
+/*
+@media screen and (max-height: 250px){
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}
+*/
+#GamePart{
+	clear: both;
+	float: left;
+	margin-top: 10px;
+	margin-left: 100px;
+	width: 1100px;
+	height: 2000px;
+	transition: 0.5s;
+}
+.Game{
+	width: 480px;	
+	height: 260px;
+	/*border: 2px solid rgba(105, 105, 105, 0.4);*/
+	float: left;
+	background-color: rgba(125, 117, 137, 0.6);
+	margin-top: 120px;
+	transition: 0.5s;
+}
+#Game01, #Game03, #Game05, #Game07, #Game09{
+	margin-left: 20px;
+}
+#Game02, #Game04, #Game06, #Game08, #Game10{
+	margin-left: 70px;
+}
+.Game:hover{
+	cursor: pointer;
+	/*border: 2px solid white;*/
+	box-shadow: 0px 0px 5px 1px #555;
+}
+.GameCover{
+	position: absolute;
+	margin-top: 20px;
+	margin-left: 10px;
+	float: left;
+	width: 100px;
+	height: 150px; 
+/*	background-color: rgb(50,50,50); */
+}
+.GameInfo{
+	position: absolute;
+	float: left;
+	padding-left: 150px;
+}
+.GameNameZh{
+	position: absolute; 
+	width: 280px; 
+	font-size: 25px; 
+	font-weight:bold;
+	padding-top: 20px;
+	z-index: 3;
+}
+.GameNameZh>a:hover{
+	cursor: pointer;
+	color: #732138;
+	transition: 0.2s;
+}
+.GameNameEn{
+	position:absolute; 
+	width: 280px; 
+	padding-top: 60px;
+}
+.Company{
+	position:absolute; 
+	width: 200px;  
+	font-weight:bold; 
+	padding-top: 100px;
+}
+.CompanyValue{
+	position:absolute; 
+	width: 100px; 
+	padding-top: 100px; 
+	padding-left: 100px;
+	z-index: 2;
+}
+.CompanyValue>a:hover{
+	cursor:pointer;
+	transition: 0.2s;
+	color: white;
+}
+.Platform{
+	position:absolute; 
+	width: 200px; 
+	font-weight:bold; 
+	padding-top: 120px;
+}
+.PlatformValue{
+	position:absolute; 
+	width: 60px; 
+	margin-top: 120px; 
+	padding-left: 100px;
+	z-index: 2;
+}
+.PlatformValue>a:hover{
+	cursor:pointer;
+	transition: 0.2s;
+	color: white;
+}
+.PlatformValue2{
+	position:absolute; 
+	width: 60px; 
+	margin-top: 120px; 
+	margin-left: 160px;
+	z-index: 1;
+}
+.PlatformValue2>a:hover{
+	cursor:pointer;
+	transition: 0.2s;
+	color: white;
+}
+.GameIntroduction{
+	width: 320px;
+	position: absolute;
+	margin-top: 145px;
+	z-index: 0;
+}
+#RankingList{
+	width: 240px;
+	height: 990px;
+	border-left: 2px solid #484557;
+	border-radius: 0px 5px 5px 0px; 
+	background-color: rgba(48, 45, 57, 0.5);
+	margin-top: 80px;
+	margin-right: 0px;
+	float: right;
+	transition: 0.5s;
+	overflow-x: hidden;
+}
+.BestScore{
+	margin-top: 20px;
+	margin-left: 40px;
+	width: 200px;
+	height: 200px;
+}
+.BestScore li{
+	margin-top: 25px;
+}
+.BestScore a:hover{
+	color: #E7473F;
+	transition: 0.2s;
+}
+.BestScore a:hover .RLBS{
+	color: #732138;
+}
+
+.RLBS{
+	width: 200px;
+	height: 0px;
+	border-radius: 5px;
+	overflow-y: hidden;
+	transition: 0.2s;
+	background-color: rgba(125, 117, 137, 0.8);
+	margin-left: -15px;
+}
+.MostPopular{
+	margin-left: 40px;
+	margin-top: 280px;
+	color: #BBA9A7;
+	width: 200px;
+	height: 200px;
+}
+.MostPopular li{
+	margin-top: 25px;
+}
+.MostPopular a:hover{
+	color: #E7473F;
+	transition: 0.2s;
+}
+.MostPopular a:hover .RLMP{
+	color: #732138;
+}
+.RLMP{
+	width: 200px;
+	height: 0px;
+	overflow-y: hidden;
+	transition: 0.2s;
+	background-color: rgba(125, 117, 137, 0.6);
+	border-radius: 5px;
+	margin-left: -15px;
+}

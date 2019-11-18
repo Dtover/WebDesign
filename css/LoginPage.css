@@ -1,0 +1,281 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+a:hover{
+	cursor: pointer;
+}
+/*
+body{
+	background: url("../images/14.jpg") top center no-repeat;
+	background-size: cover;
+}
+*/
+.GICintrobtn{
+	font-size: 15px; 
+	color: green; 
+	float: left;
+}
+.GICintrobtn:hover{
+	cursor: pointer;
+	color: rgba(27, 128, 27, 0.8);
+}
+#GICintro{
+	position: fixed;
+	top: 280px;
+	left: 360px;
+	width: 210px;
+	height: 100px;
+	visibility: hidden;
+}
+#GICintro.gicshow {
+	visibility: visible;			
+	-webkit-animation: gicin 0.5s, gicout 0.5s 5s;
+	animation: gicin 0.5s, gicout 0.5s 5s;
+}
+@-webkit-keyframes gicin{
+	from {left: 100;opacity: 0;}
+	to {left: 360px; opacity: 1;}
+}
+@-webkit-keyframes gicout {
+	from {left: 360px; opacity: 1;}
+	to {left: 100;opacity: 0;}
+}
+@keyframes gicin {
+	from {left: 100;opacity: 0;}
+	to {left: 360px; opacity: 1;}
+}
+@keyframes gicout {
+	from {left: 360px; opacity: 1;}
+	to {left: 100;opacity: 0;}
+}
+.signin{
+	color: grey;
+	margin-top: 10px;
+	float: right;
+	transform: 0.2s;
+}
+.signin:hover{
+	cursor: pointer;
+	color: #aaa;
+}
+#LoginPart{
+	position: fixed;
+	visibility: hidden;
+	width: 300px;
+	height: 200px;
+	top: 260px;
+	left: 575px;
+	background-color: rgba(120,120,120,0.5);
+	box-shadow: 0px 0px 1px grey;
+	z-index: 1;
+}
+#Welcome{
+	position: fixed;
+	left: 590px;
+	top: 280px;
+	z-index: 2;
+}
+#LoginPart.LoginPartShow{
+	visibility: visible;
+	-webkit-animation: fadein 0.8s;
+	animation: fadein 0.8s;
+}
+@-webkit-keyframes fadein {
+	from {top: 0; opacity: 0;}
+	to {top: 260px; opacity: 1;}
+}
+@keyframes fadein {
+	from {top: 0; opacity: 0;}
+	to {top: 260px; opacity: 1;}
+}
+.logoPart{
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 120px;
+}
+.profile{
+	width: 60px;	
+	height: 60px;
+	display: flex;
+	border-radius: 50%;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+}
+.NameInput{
+	position: absolute;
+	margin-top: 80px;
+	margin-left: 20px;
+}
+.PwdInput{
+	position: absolute;
+	margin-top: 120px;
+	margin-left: 20px;
+}
+.username, .pwd{
+	height: 25px;
+	width: 180px; 
+	background-color: #efefef; 
+	border: 0px;
+	border-radius: 3px; 
+	
+}
+.pwd{
+	margin-left: 7px;
+}
+.username::placeholder,
+.pwd::placeholder{
+	color: #efefef;
+}
+.username:focus::-webkit-input-placeholder,
+.pwd:focus::-webkit-input-placeholder,
+.username:active::-webkit-input-placeholder,
+.pwd:active::-webkit-input-placeholder{
+	color: #aaa;
+}
+
+.loginbutton{
+	position: absolute;
+	margin-left: 100px;
+	margin-top: 160px;
+	width: 100px;
+	height: 25px;
+	border: 0px;
+	border-radius: 5px;
+	transition: 0.3s;
+}
+.loginbutton:hover{
+	box-shadow: 0px 0px 2px grey;
+	cursor: pointer;
+}
+.pwdfont{
+	margin-left: 12px;
+}
+#RegisterBtn{
+	float: left;
+	margin-top: 200px; 
+	font-size: 15px; 
+	color: grey;
+}
+#RegisterBtn:hover{
+	cursor: pointer;
+	color: black;
+}
+#Register{
+	float: left;
+	position: fixed;
+	width: 500px;
+	height: 500px;
+	background-color: rgba(120,120,120,0.5);
+	top: 140px;
+	left: 475px;
+	visibility: hidden;
+}
+#Register.RegisterShow{
+	visibility: visible;
+	animation: regin 1s;
+	-webkit-animation: regin 1s;
+}
+@keyframes regin {
+	from {top: -300px; opacity: 0;}
+	to {top: 140px; opacity: 1;}
+}
+#LoginPart.Logindis{
+	visibility: visible;
+	animation: fadeout 1s;	
+	-webkit-animation: fadeout 1s;
+}
+@keyframes fadeout {
+	from {top: 260px; opacity: 1;}
+	to {top: 700px; opacity: 0;}
+}
+@-webkit-keyframes fadeout{
+	from {top: 260px; opacity: 1;}
+	to {top: 700px; opacity: 0;}
+}
+#BacktoLogin{
+	float: right;	
+	transition: .3s;
+}
+#BacktoLogin:hover{
+	cursor: pointer;
+	color: white;
+}
+#Register.RegisterHide{
+	visibility: visible;
+	animation: regout 1s;
+	-webkit-animation: regout 1s;
+}
+@keyframes regout{
+	from {top: 140px; opacity: 1;}
+	to {top: -300px; opacity: 0;}
+}
+@-webkit-keyframes regout{
+	from {top: 140px; opacity: 1;}
+	to {top: -300px; opacity: 0;}
+}
+#LoginPart.Loginshowagain{
+	visibility: visible;
+	animation: fadeinin 1s;	
+	-webkit-animation: fadeinin 1s;
+}
+@keyframes fadeinin {
+	from {top: 700px; opacity: 0;}
+	to {top: 260px; opacity: 1;}
+}
+@-webkit-keyframes fadeinin{
+	from {top: 700px; opacity: 0;}
+	to {top: 260px; opacity: 1;}
+}
+#suusername, #supwd, #copwd{
+    border: 0px;
+    border-radius: 3px;
+    height: 25px;
+    background-color: #efefef;
+}
+#suusername::-webkit-input-placeholder,
+#supwd::-webkit-input-placeholder,
+#copwd::-webkit-input-placeholder{
+    color: #efefef;
+}
+#suusername:focus::-webkit-input-placeholder,
+#supwd:focus::-webkit-input-placeholder,
+#copwd:focus::-webkit-input-placeholder{
+    color: #aaa;
+
+}
+#Register label{
+    cursor: pointer;
+    display: inline-block;
+    padding: 3px 6px;
+    text-align: right;
+    width: 150px;
+    vertical-align: top;
+}
+#BacktoLogin{
+    float: right;
+    margin-top: 100px;
+    margin-right: 20px;
+}
+#BacktoLogin:hover{
+    cursor: pointer;
+    color: white;
+}
+.SuBtn{
+    background-color: grey;
+    width: 100px;
+    height: 30px;
+    border: 0px;
+    border-radius: 3px;
+    transition: .3s;
+}
+.SuBtn:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 3px grey;
+}
