@@ -5,41 +5,67 @@
 }
 #suusername, #supwd, #copwd{
 	border: 0px;
-	border-radius: 3px;
-	height: 25px;
+	border-radius: 0px 3px 3px 0px;
+	height: 30px;
+	width: 200px;
 	background-color: #efefef;
+	outline: 0;
+	transition:.3s ease-in-out;
+	text-indent: 100px;
 }
 #suusername::-webkit-input-placeholder,
 #supwd::-webkit-input-placeholder,
 #copwd::-webkit-input-placeholder{
+	text-indent: 20px;
 	color: #efefef;
 }
 #suusername:focus::-webkit-input-placeholder,
 #supwd:focus::-webkit-input-placeholder,
 #copwd:focus::-webkit-input-placeholder{
 	color: #aaa;
-
 }
-label{
+#suusername:focus,
+#supwd:focus,
+#copwd:focus{
+	text-indent: 20px;
+}
+#suusername:focus + label,
+#supwd:focus + label,
+#copwd:focus + label{
+	transform: perspective(400px) translateX(-70%) rotateY(70deg);
+}
+#suusername + label,
+#supwd + label,
+#copwd + label{
+	position: absolute;
+	left: 144px;
+	width: 90px;
+	height: 30px;
+	font-size: 14px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #a3a7a7;
+	border-radius: 3px 0px 0px 3px;
+	transition: .3s ease-in-out;
+	transform-origin: right center;
+	transform: perspective(300px) scaleX(1) rotateY(0deg);
+}
+label:hover{
 	cursor: pointer;
-	display: inline-block;
-	padding: 3px 6px;
-	text-align: right;
-	width: 150px;
-	vertical-align: top;
 }
 #Register{
+	text-align: center;
     float: left;
     position: fixed;
     width: 500px;
-    height: 500px;
-    background-color: rgba(120, 120, 120, 0.5);
+    height: 460px;
+    background-color: rgba(209, 209, 209, 0.6);
     top: 140px;
     left: 475px;
 }
 #BacktoLogin{
     float: right;
-	margin-top: 100px;
+	margin-top: 70px;
 	margin-right: 20px;
 }
 #BacktoLogin:hover{
@@ -47,12 +73,14 @@ label{
     color: white;
 }
 .SuBtn{
-	background-color: grey;
+	background-color: #a3a7a7;
 	width: 100px;
 	height: 30px;
 	border: 0px;
 	border-radius: 3px;
-	transition: .3s;
+	outline-color: black;
+	float: left;
+	margin-left: 140px;
 }
 .SuBtn:hover{
 	cursor: pointer;

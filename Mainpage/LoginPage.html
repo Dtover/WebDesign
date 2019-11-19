@@ -17,35 +17,36 @@
 	<div id="LoginPart">
 		<div class="logoPart"><img class="profile" src="../images/logo2.png"></div>
 		<div class="NameInput">
+			<input class="username" placeholder="who are you" type="text">
 			<label for="name">用户名：</label>
-			<input class="username" placeholder="USERNAME" type="text">
 		</div>
 		<div class="PwdInput">
+			<input class="pwd" placeholder="prove that" type="password">
 			<label for="password">密&nbsp;&nbsp;码：</label>
-			<input class="pwd" placeholder="PASSWORD" type="password">
 		</div>	
-			<input style="background-color: grey;" class="loginbutton" type="button" value="Sign in" onclick="LoginFunction()">
+			<input style="background-color: #a3a7a7;" class="loginbutton" type="button" value="Sign in" onclick="LoginFunction()">
 		<div id="RegisterBtn" onclick="ShowReg()">No account? Get one!</div>
 	</div>
 	<div id="Register">
-		<div style="text-align: center; font-size: 30px; margin-top: 40px;">
+        <div style="text-align: center; font-size: 30px; margin-top: 40px;">
             Sign Up
         </div>
         <div style="margin-left: 40px; margin-top: 40px;">
+            <input id="suusername" type="text" placeholder="name yourself">
             <label for="username">用户名：</label>
-            <input id="suusername" type="text" placeholder="USERNAME">
         </div>
         <div style="margin-left: 40px; margin-top: 40px;">
+            <input id="supwd" type="password" placeholder="no one would know">
             <label for="password">密&nbsp;&nbsp;码：</label>
-            <input id="supwd" type="password" placeholder="PASSWORD">
         </div>
         <div style="margin-left: 40px; margin-top: 40px;">
+            <input id="copwd" type="password" placeholder="do it again !">
             <label for="repwd">确认密码：</label>
-            <input id="copwd" type="password" placeholder="CONFIG PASSWORD">
         </div>
         <div style="text-align: center; margin-top: 40px;">
-            <button type="button" class="SuBtn" onclick="window.alert('Sign up successfully!')">Sign Up</button>
-        </div>
+            <button type="button" class="SuBtn" onclick="judgeReg()">Sign Up</button>
+            <button class="SuBtn" style="margin-left: 30px;" onclick="ClearInput()">ReSet Input</button>
+        </div>	
 		<div id="BacktoLogin" onclick="HideReg()">Go back to sign in</div>
 	</div>
 </body>

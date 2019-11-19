@@ -44,3 +44,20 @@ function HideReg(){
 	j.className = "Loginshowagain";
 	setTimeout(function(){ document.getElementById("Register").style.display = "none"; }, 1000);
 }
+function judgeReg(){
+	var name = document.getElementById("suusername").value;
+	var pwd = document.getElementById("supwd").value;
+	var repwd = document.getElementById("copwd").value;
+	if(name == "" || pwd == "" || repwd == ""){
+		alert("Are you sure you fill are the input windows?");
+	}else if(pwd != repwd){
+		alert("Twice password input must be same ! Please check your input and do it again");
+	}else{
+		alert("Contratulations! Sign up successfully!")
+	}
+}
+function ClearInput(){
+	document.getElementById("suusername").value = "";
+	document.getElementById("supwd").value = "";
+	document.getElementById("copwd").value = "";
+}
