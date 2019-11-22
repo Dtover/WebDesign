@@ -39,7 +39,7 @@ body{
 	animation: gicin 0.5s, gicout 0.5s 5s;
 }
 @-webkit-keyframes gicin{
-	from {left: 100;opacity: 0;}
+	from {left: 100px;opacity: 0;}
 	to {left: 360px; opacity: 1;}
 }
 @-webkit-keyframes gicout {

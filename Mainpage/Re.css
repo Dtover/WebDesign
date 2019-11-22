@@ -3,6 +3,10 @@
 	margin: 0px;
 	padding: 0px;
 }
+body{
+	background: url("../images/40.jpg");
+	background-size: cover;
+}
 #suusername, #supwd, #copwd{
 	border: 0px;
 	border-radius: 0px 3px 3px 0px;
@@ -59,7 +63,6 @@ label:hover{
     position: fixed;
     width: 500px;
     height: 460px;
-    background-color: rgba(209, 209, 209, 0.6);
     top: 140px;
     left: 475px;
 }
@@ -85,4 +88,27 @@ label:hover{
 .SuBtn:hover{
 	cursor: pointer;
 	box-shadow: 0px 0px 3px grey;
+}
+/*background with a effect*/
+#Register{
+	z-index: 1;
+	background-position: center top;
+	background-size: cover;
+	background-attachment: fixed;
+	box-shadow: 0px 0px 3px black;
+}
+#Register:after{
+	z-index: -1;
+	content: '';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	background-position: center top;
+	background-size: cover;
+	background-image: url("../images/40.jpg");
+	background-attachment: fixed;
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
 }

@@ -15,6 +15,7 @@ a:hover{
 body{
 	z-index: -1;
 	width: 1450px;
+	height: 1000px;
 }
 .sidenav{
 	height: 100%;
@@ -142,8 +143,41 @@ body{
 	margin-top: 80px;
 }
 #LGames{
-	display: none;
+	visibility: visible;
+	top: 600px;
+	left: 0px;
+	position: absolute;
+	display: block;
+	width: 800px;
+	height: 800px;
 }
+#LGames.lgdisappear{
+	visibility: visible;
+	animation: lgdis 1s;
+	-webkit-animation: lgdis 1s;
+}
+@keyframes lgdis {
+	from { left: 0px; opacity: 1; }	
+	to { left: -800px; opacity: 0; }
+}
+@-webkit-keyframes lgdis {
+	from { left: 0px; opacity: 1; }	
+	to { left: -800px; opacity: 0; }
+}
+#LGames.lgappear{
+	visibility: visible;
+	animation: lgshow 1s;
+	-webkit-animation: lgshow 1s;
+}
+@keyframes lgshow {
+	from { left: -800px; opacity: 0; }	
+	to { left: 0px; opacity: 1; }
+}
+@-webkit-keyframes lgshow {
+	from { left: -800px; opacity: 0; }	
+	to { left: 0px; opacity: 1; }
+}
+
 #LGames>a{
 	float: left;
 	margin-left: 20px;
@@ -159,7 +193,38 @@ body{
 	color: black;
 }
 #Comment{
-	display: block;
+	visibility: hidden;
+	top: 600px;
+	left: 0px;
+	position: absolute;
+	width: 800px;
+	height: 800px;
+}
+#Comment.coappear{
+	visibility: visible;
+	animation: coshow 1s;
+	-webkit-animation: coshow 1s;
+}
+@keyframes coshow{
+	from { left: 800px; opacity: 0; }	
+	to { left: 0px; opacity: 1; }
+}
+@-webkit-keyframes coshow{
+	from { left: 800px; opacity: 0; }	
+	to { left: 0px; opacity: 1; }
+}
+#Comment.codisappear{
+	visibility: visible;
+	animation: cohide 1s;
+	-webkit-animation: cohide 1s;
+}
+@keyframes cohide{
+	from { left: 0px; opacity: 1; }	
+	to { left: 800px; opacity: 0; }
+}
+@-webkit-keyframes cohide{
+	from { left: 0px; opacity: 1; }	
+	to { left: 800px; opacity: 0; }
 }
 #Comment>div{
 	float: left;
@@ -168,4 +233,26 @@ body{
 	margin-top: 20px;
 	margin-left: 20px;
 	background-color: grey;
+}
+#mySidenav{
+    z-index: 1;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0px 0px 3px black;
+}
+#mySidenav:after{
+    z-index: -1;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-position: center top;
+    background-size: cover;
+    background-image: url("../images/40.jpg");
+    background-attachment: fixed;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
 }

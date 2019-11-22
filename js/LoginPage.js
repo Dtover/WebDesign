@@ -11,11 +11,11 @@ function LoginFunction(){
 	}
 }
 //Press enter to login
-document.addEventListener("keyup", function(event) {
-	if(event.keyCode == "13"){
-		document.getElementsByClassName("loginbutton")[0].click();
-	}
-});
+//document.addEventListener("keyup", function(event) {
+	//if(event.keyCode == "13"){
+		//document.getElementsByClassName("loginbutton")[0].click();
+	//}
+//});
 //show what GIC means part
 function GICshow(){
 	var i = document.getElementById("GICintro");		
@@ -49,7 +49,7 @@ function judgeReg(){
 	var pwd = document.getElementById("supwd").value;
 	var repwd = document.getElementById("copwd").value;
 	if(name == "" || pwd == "" || repwd == ""){
-		alert("Are you sure you fill are the input windows?");
+		alert("Are you sure you have filled all the input windows?");
 	}else if(pwd != repwd){
 		alert("Twice password input must be same ! Please check your input and do it again");
 	}else{

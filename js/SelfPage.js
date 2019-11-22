@@ -35,15 +35,38 @@ function Cp(){
 		document.getElementById("CpBar").style.height = "0px";
 	}
 }
+//Control the times of clicking the button
+var mutex = true;
 function showlgames(){
+	if(mutex){
+		return;
+	}
+	document.getElementById("LGames").style.display = "block";
+	var i = document.getElementById("LGames");
+	i.className = "lgappear";
+	var j = document.getElementById("Comment");
+	j.className = "codisappear";
 	document.getElementById("likebtn").style.background = "rgba(25, 25, 25, 0.8)";
 	document.getElementById("commentbtn").style.background = "white";
-	document.getElementById("LGames").style.display = "block";
-	document.getElementById("Comment").style.display = "none";
+	document.getElementById("likebtn").style.color = "white";
+	document.getElementById("commentbtn").style.color = "black";
+	setTimeout(function(){ document.getElementById("Comment").style.display = "none"; mutex = true; }, 1000)
+	
 }
 function showcomments(){
+	if(!mutex){
+		return;
+	}
+	document.getElementById("Comment").style.display = "block";
+	var i = document.getElementById("LGames");
+	i.className = "lgdisappear";
+	var j = document.getElementById("Comment");
+	j.className = "coappear";
 	document.getElementById("commentbtn").style.background = "rgba(25, 25, 25, 0.8)";
 	document.getElementById("likebtn").style.background = "white";
-	document.getElementById("Comment").style.display = "block";
-	document.getElementById("LGames").style.display = "none";
+	document.getElementById("likebtn").style.color = "black";
+	document.getElementById("commentbtn").style.color = "white";
+	setTimeout(function(){ document.getElementById("LGames").style.display = "none"; mutex = false;}, 1000)
+	
 }
+	
