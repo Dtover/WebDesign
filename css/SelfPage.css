@@ -76,7 +76,7 @@ body{
 	transition: 0.4s;
 }
 .BGP{
-	background: url("../images/40.jpg") no-repeat;
+	background: url("../images/BGP/40.jpg") no-repeat;
 	background-size: 1450px auto;
 	width: 1450px;
 	height: 500px;
@@ -251,7 +251,7 @@ body{
     position: absolute;
     background-position: center top;
     background-size: cover;
-    background-image: url("../images/40.jpg");
+    background-image: url("../images/BGP/40.jpg");
     background-attachment: fixed;
     filter: blur(2px);
     -webkit-filter: blur(2px);
@@ -275,6 +275,7 @@ body{
 }
 #LGames>a>img{
 	float: left;
+	margin-right: 10px;
 	height: 120px;
 }
 #LGames>a>div{

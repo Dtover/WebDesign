@@ -68,7 +68,43 @@ function showcomments(){
 	document.getElementById("commentbtn").style.color = "white";
 	setTimeout(function(){ document.getElementById("LGames").style.display = "none"; mutex = false;}, 1000)
 }
+
+function likesadd(){
+	for(var i = 0; i <= Number(localStorage["gamecounter"]);i++){
+		var game = "game" + String(i);
+		var gamestr = localStorage.getItem(game);
+		var gameinfo = JSON.parse(gamestr);
+		if(gameinfo != null){
+			var G = document.getElementById("LGames");
+			var a = document.createElement("a");
+			var img = document.createElement("img");
+			var D = document.createElement("div");
+			var d1 = document.createElement("div");
+			d1.append(gameinfo.score);
+			var d2 = document.createElement("div");
+			d2.append(gameinfo.chname);
+			var d3 = document.createElement("div");
+			d3.append(gameinfo.enname);
+			var d4 = document.createElement("div");
+			d4.append(gameinfo.platform);
+			imgpath = "../images/" + gameinfo.enname + ".png";
+			img.src = imgpath;
+			a.href="";
+			D.append(d1);
+			D.append(d2);
+			D.append(d3);
+			D.append(d4);
+			a.append(img);
+			a.append(D);
+			G.append(a);
+		}else{
+			break;
+		}
+	}
+}
+
 function commentadd(){
+	likesadd();
 	commentid = "GC";
 	for(var i = 1; i <= Number(localStorage.getItem("counter")); i++)	{
 		var cid = commentid + String(i);
@@ -88,7 +124,7 @@ function commentadd(){
 			var textarea = document.createElement("p");
 			textarea.append(comment[i].comment);
 			var datearea = document.createElement("span");
-			datearea.append("on " + comment[i].date);
+			datearea.append(comment[i].date);
 			newcom.append(textarea);
 			newcom.append(datearea);
 			Com.append(img);
@@ -98,4 +134,23 @@ function commentadd(){
 		  break;
 		}
 	}
+}
+function clearall(){
+	for(var i = 0; i <= Number(localStorage.getItem("gamecounter")); i++){
+		var game = "game" + String(i);
+		if(game != null)
+			localStorage.removeItem(game);
+		else
+			break;
+	}
+	for(var i = 0; i <= Number(localStorage.getItem("counter")); i++){
+		var gccomment = "GC" + String(i);
+		if(gccomment != null)
+			localStorage.removeItem(gccomment );
+		else
+			break;
+	}
+	localStorage.setItem("gamecounter", 0);
+	localStorage.setItem("counter", 0);
+	window.location.reload();
 }

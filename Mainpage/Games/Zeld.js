@@ -12,25 +12,12 @@ function loadcomment(){
 			var node = document.createTextNode(comment[i].comment);
 			addc.append(node);
 			var commentdate = document.createElement("span");
-			commentdate.append("on" + comment[i].date);
+			commentdate.append(comment[i].date);
 			addc.append(commentdate);
 			ctag.append(addc);
 		}else{
 		  break;
 		}
-
-
-
-		//var cid = commentid + String(i);
-		//com = localStorage.getItem(cid);
-		//var c = document.createElement("div");
-		//c.innerHTML = localStorage.getItem(cid);
-		//if(c.innerHTML != null){
-			//var ctag = document.getElementsByClassName("Comment")[0];
-			//ctag.append(c);
-		//}else{
-			//break;
-		//}
 	}
 }
 function openNav() {
@@ -101,11 +88,27 @@ function Mouseoutevent(id){
 	document.getElementById(ID).style.border = "2px solid rgba(25, 25, 25, 0.1)";
 	document.getElementById(ID).style.opacity = "0.6";
 }
+
+
 function Like(){
-	alert("Add to my likes successfully!");
+	function Gameinfo(chname, enname, score, platform){
+		this.chname = chname;
+		this.enname = enname;
+		this.score = score;
+		this.platform = platform;
+	}
+	//localStorage["gamecounter"] = 0;
+	
+	var game = "game" + localStorage.getItem("gamecounter");
+	var gameinfo = new Gameinfo("旷野之息", "Breathe of Wild", "10.0", "NS,WiiU");
+	strgameinfo = JSON.stringify(gameinfo);
+	localStorage[game] = strgameinfo;
+	localStorage["gamecounter"] = Number(localStorage.getItem("gamecounter")) + 1;
+	alert("Already add to my favourite list");
 }
+
 function Hate(){
-	alert("Remove from my likes successfully!");
+	alert("哦O.O");
 }
 function obj(comment, date, game){
 	this.comment = comment;
@@ -122,7 +125,7 @@ function AddComment(){
 		var i = Number(localStorage.getItem("counter")) + 1;
 		localStorage.setItem("counter",i);
 		var time = new Date();
-		var date = time.getFullYear() + "/" + time.getMonth() + "/" +time.getDate();
+		var date = "on " + time.getFullYear() + "/" + time.getMonth() + "/" +time.getDate();
 		var cid = commentid + String(localStorage.getItem("counter"));
 		var ctag = document.getElementsByClassName("Comment")[0];
 		var addc = document.createElement("div");
@@ -132,13 +135,11 @@ function AddComment(){
 		commentdate.append(date);
 		addc.append(commentdate);
 		ctag.append(addc);
-		com[i] = new obj(comment, date, "zeld");
+		com[i] = new obj(comment, date, "Breathe of Wild");
 		var strcomment = new Array();
 		strcomment[i] = JSON.stringify(com[i]);
 		localStorage[cid] = strcomment[i];
 		document.querySelector("#commentarea").value = "";
-
-
 		//var commentid = "Zeld";
 		//var i = Number(localStorage.getItem("counter")) + 1;
 		//localStorage.setItem("counter",i);

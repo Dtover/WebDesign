@@ -9,7 +9,7 @@ a{
 	outline: none;
 }
 body{
-	background:url("../images/40.jpg") top no-repeat fixed; 
+	background:url("../images/BGP/40.jpg") top no-repeat fixed; 
 	z-index: -1;
 	background-size: cover;
 }

@@ -4,7 +4,9 @@
 	padding: 0px;
 }
 body{
-	background: url("../images/40.jpg");
+	width: 1450px;
+	background: url("./images/40.jpg") fixed no-repeat;
+	z-index: -1;
 	background-size: cover;
 }
 #suusername, #supwd, #copwd{
@@ -107,7 +109,7 @@ label:hover{
 	position: absolute;
 	background-position: center top;
 	background-size: cover;
-	background-image: url("../images/40.jpg");
+	background-image: url("./images/40.jpg");
 	background-attachment: fixed;
 	filter: blur(5px);
 	-webkit-filter: blur(5px);
