@@ -43,6 +43,15 @@ body{
 	cursor: pointer;
 	color: #f1f1f1;
 }
+.cu a, .do a{
+	font-size: 20px !important;
+	padding-bottom: 5px !important;
+	width: 150px;
+	text-decoration: none;
+	color: #909090;
+	transition: 0.3s;
+	padding-top: 0px;
+}
 #PfBar a, #CpBar a{
 	font-size: 20px;
 	color: #606060;

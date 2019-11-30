@@ -6,10 +6,10 @@
 	<link rel="stylesheet" href="./Zeld.css" type="text/css">
 	<script src="./Zeld.js"></script>
 </head>
-<body>
+<body onload="loadcomment()">
 		<!--SideBar part -->
 		<div id="mySidenav" class="sidenav">
-			<a href="SelfPage.html">DreamLocker</a>
+			<a href="/home/dreamlocker/WebDesign/Mainpage/SelfPage.html">DreamLocker</a>
 			<br>
 			<span class="plco" onclick="Pf()">Platform</span>
 			<div id="PfBar" style="height: 160px;">
@@ -25,6 +25,8 @@
 				<a href="../MicrosoftGL.html">Microsoft</a>
 				<a href="../OtherCompanyGL.html">Others</a>
 			</div>
+			<div class="cu"><a href="">Connect us</a></div>
+			<div class="do"><a href="">Donate</a></div>
 		</div>
 		<div style="font-size: 20px; font-weight: bold; margin-left: 350px; margin-top: 40px; position: absolute;">塞尔达传说：旷野之息</div>
 		<div style="font-size: 20px; margin-left: 350px; margin-top: 74px; position: absolute;">Legend of Zeld:the Breathe of Wild</div>
@@ -58,135 +60,38 @@
 				</div>
 			</div>
 			<div>
-				<div class="Btn" id="LikeBtn">Like it</div>
-				<div class="Btn" id="HateBtn">Hate it</div>
+				<div class="Btn" id="LikeBtn" onclick="Like()">Like it</div>
+				<div class="Btn" id="HateBtn" onclick="Hate()">Hate it</div>
 			</div>
-			<div class="GameTags">
-				<br>
-				<p style="color: grey;">player tags</p>
-				<div style="margin-top: 5px;">
-					<span>开放世界</span>
-					<span>解谜</span>
-					<span>动作</span>
+			<div>
+				<div class="Comment">
+					<div>
+						<p>满分并不意味着这个游戏是完美无缺的，给予如此的评价无非是向制作人员对游戏本质的不懈追求表示我们最高敬意！</p>
+						<span>2019/10/11</span>
+					</div>
+					<div>
+						<p>无可争议的神作</p>	
+						<span>2019/10/11</span>
+					</div>
+					<div>
+						<p>这是一款为了玩到它值得买一款主机的游戏</p>
+						<span>2019/10/11</span>
+					</div>
+					<div>
+						<p>无可挑剔的艺术品</p>	
+						<span>2019/10/11</span>
+					</div>
+					<div>
+						<p>满分并不意味着这个游戏是完美无缺的，给予如此的评价无非是向制作人员对游戏本质的不懈追求表示我们最高敬意！</p>
+						<span>2019/10/11</span>
+					</div>
+					<div>
+						<p>无可争议的神作</p>	
+						<span>2019/10/11</span>
+					</div>
 				</div>
-				<div style="margin-top: 5px;">
-					<span>中文</span>
-					<span>神作</span>
-					<span>开放沙盒</span>
-					<span>冒险</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱</span>
-				</div>
-				<div style="margin-top: 5px;">
-					<span>沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-					<span>沙箱沙箱</span>
-				</div>
+				<textarea name="" id="commentarea" cols="37" rows="5" placeholder="Say something"></textarea>
+				<button class="addCoBtn" onclick="AddComment()">add comments</button>
 			</div>
 		</div>
 		<div class="GameTextIntro">
@@ -216,9 +121,33 @@
 					<div style="font-size: 12px; color: grey;margin-top: 20px;">NS,WiiU</div>
 				</div>
 			</a>
-			<div class="RGame"></div>
-			<div class="RGame"></div>
-			<div class="RGame"></div>
+			<a class="RGame" href="../GameList.html">
+				<img style="float: left;" src="./images/001LegendofZeld.png" height="100px">
+				<div style="float: left;">
+					<div style="font-size: 20px; margin-top: 5px;">10.0</div>
+					<div style="font-size: 15px; font-weight: bold;">旷野之息</div>
+					<div style="font-size: 13px;">Breathe of Wild</div>
+					<div style="font-size: 12px; color: grey;margin-top: 20px;">NS,WiiU</div>
+				</div>
+			</a>
+			<a class="RGame" href="../GameList.html">
+				<img style="float: left;" src="./images/001LegendofZeld.png" height="100px">
+				<div style="float: left;">
+					<div style="font-size: 20px; margin-top: 5px;">10.0</div>
+					<div style="font-size: 15px; font-weight: bold;">旷野之息</div>
+					<div style="font-size: 13px;">Breathe of Wild</div>
+					<div style="font-size: 12px; color: grey;margin-top: 20px;">NS,WiiU</div>
+				</div>
+			</a>
+			<a class="RGame" href="../GameList.html">
+				<img style="float: left;" src="./images/001LegendofZeld.png" height="100px">
+				<div style="float: left;">
+					<div style="font-size: 20px; margin-top: 5px;">10.0</div>
+					<div style="font-size: 15px; font-weight: bold;">旷野之息</div>
+					<div style="font-size: 13px;">Breathe of Wild</div>
+					<div style="font-size: 12px; color: grey;margin-top: 20px;">NS,WiiU</div>
+				</div>
+			</a>
 		</div>
 	</body>
 </html>

@@ -1,13 +1,14 @@
 function LoginFunction(){
 	var name = document.getElementsByClassName("username")[0].value;
 	var pwd = document.getElementsByClassName("pwd")[0].value;
-	if(name == "admin" && pwd =="123456"){
+	if(pwd == localStorage.getItem(name)){
 		//open new link in current page	
-		window.location.href = "../Mainpage/GameList.html";
+		setTimeout(function(){ window.location.href = "../Mainpage/GameList.html"; }, 300);
 		//open new link in new page
 		//window.open("../Mainpage/GameList.html");
 	}else{
-		alert("Please check the username and password!");	
+		setTimeout(function(){ alert("Please check the username and password!"); }, 300);
+		
 	}
 }
 //Press enter to login
@@ -49,11 +50,12 @@ function judgeReg(){
 	var pwd = document.getElementById("supwd").value;
 	var repwd = document.getElementById("copwd").value;
 	if(name == "" || pwd == "" || repwd == ""){
-		alert("Are you sure you have filled all the input windows?");
+		setTimeout(function(){ alert("Are you sure you have filled all the input windows?"); }, 300);
 	}else if(pwd != repwd){
-		alert("Twice password input must be same ! Please check your input and do it again");
+		setTimeout(function(){ alert("Twice passwords input must be the same ! Please check your input and do it again"); }, 300);
 	}else{
-		alert("Contratulations! Sign up successfully!")
+		localStorage.setItem(name, pwd);
+		setTimeout(function(){ alert("Sign Up Successfully !"); }, 300);
 	}
 }
 function ClearInput(){

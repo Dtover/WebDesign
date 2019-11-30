@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="Re.css">
+	<script src="Re.js"></script>
 </head>
 <body>
 	<div id="Register">
@@ -15,18 +16,18 @@
 			<label for="username">用户名：</label>
 		</div>
 		<div style="margin-left: 40px; margin-top: 40px;">
-			<input id="supwd" type="password" placeholder="no one would know">
+			<input id="supwd" type="text" placeholder="no one would know">
 			<label for="password">密&nbsp;&nbsp;码：</label>
 		</div>
 		<div style="margin-left: 40px; margin-top: 40px;">
-			<input id="copwd" type="password" placeholder="do it again !">
+			<input id="copwd" type="text" placeholder="do it again !">
 			<label for="repwd">确认密码：</label>
 		</div>
 		<div style="text-align: center; margin-top: 40px;">
-			<button type="button" class="SuBtn" onclick="window.alert('Sign up successfully!')">Sign Up</button>
-			<button class="SuBtn" style="margin-left: 30px;" onclick="ClearInput()">ReSet Input</button>
+			<button type="button" class="SuBtn" onclick="reg()">Sign Up</button>
+			<button class="SuBtn" style="margin-left: 30px;" onclick="check()">ReSet Input</button>
 		</div>
-		<div id="BacktoLogin">Go back to sign in</div>
+		<div id="BacktoLogin" onclick="login()">Go back to sign in</div>
 	</div>	
 </body>
 </html>

@@ -67,6 +67,35 @@ function showcomments(){
 	document.getElementById("likebtn").style.color = "black";
 	document.getElementById("commentbtn").style.color = "white";
 	setTimeout(function(){ document.getElementById("LGames").style.display = "none"; mutex = false;}, 1000)
-	
 }
-	
+function commentadd(){
+	commentid = "GC";
+	for(var i = 1; i <= Number(localStorage.getItem("counter")); i++)	{
+		var cid = commentid + String(i);
+		var strcomment = new Array();
+		strcomment[i] = localStorage.getItem(cid);
+		var comment = new Array();
+		comment[i] = JSON.parse(strcomment[i]);
+		if(comment[i] != null){
+			var c = document.getElementById("Comment");
+			var Com = document.createElement("div");
+			Com.className = "com";
+			var newcom = document.createElement("div");
+			var img = document.createElement("img");
+			imgpath = "/home/dreamlocker/WebDesign/images/" + comment[i].game + ".png";
+			img.height = "100";
+			img.src = imgpath;
+			var textarea = document.createElement("p");
+			textarea.append(comment[i].comment);
+			var datearea = document.createElement("span");
+			datearea.append("on " + comment[i].date);
+			newcom.append(textarea);
+			newcom.append(datearea);
+			Com.append(img);
+			Com.append(newcom);
+			c.append(Com);
+		}else{
+		  break;
+		}
+	}
+}

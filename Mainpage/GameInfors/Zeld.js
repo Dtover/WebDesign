@@ -1,3 +1,38 @@
+function loadcomment(){
+	commentid = "GC";
+	for(var i = 1; i <= Number(localStorage.getItem("counter")); i++)	{
+		var cid = commentid + String(i);
+		var strcomment = new Array();
+		strcomment[i] = localStorage.getItem(cid);
+		var comment = new Array();
+		comment[i] = JSON.parse(strcomment[i]);
+		if( comment[i] != null){
+			var ctag = document.getElementsByClassName("Comment")[0];
+			var addc = document.createElement("div");
+			var node = document.createTextNode(comment[i].comment);
+			addc.append(node);
+			var commentdate = document.createElement("span");
+			commentdate.append("on" + comment[i].date);
+			addc.append(commentdate);
+			ctag.append(addc);
+		}else{
+		  break;
+		}
+
+
+
+		//var cid = commentid + String(i);
+		//com = localStorage.getItem(cid);
+		//var c = document.createElement("div");
+		//c.innerHTML = localStorage.getItem(cid);
+		//if(c.innerHTML != null){
+			//var ctag = document.getElementsByClassName("Comment")[0];
+			//ctag.append(c);
+		//}else{
+			//break;
+		//}
+	}
+}
 function openNav() {
 	var value = document.getElementById("mySidenav").style.width; 	
 	if(value == "220px"){
@@ -36,9 +71,6 @@ function Cp(){
 	}
 
 }
-function SelfSwitch(){
-	
-}
 var picnum = new Array();
 picnum[1] = "./images/01.jpg";
 picnum[2] = "./images/02.jpg";
@@ -68,4 +100,61 @@ function Mouseoutevent(id){
 	var ID = "CP" + id;
 	document.getElementById(ID).style.border = "2px solid rgba(25, 25, 25, 0.1)";
 	document.getElementById(ID).style.opacity = "0.6";
+}
+function Like(){
+	alert("Add to my likes successfully!");
+}
+function Hate(){
+	alert("Remove from my likes successfully!");
+}
+function obj(comment, date, game){
+	this.comment = comment;
+	this.date = date;
+	this.game = game;
+}
+function AddComment(){
+	var comment =document.querySelector("#commentarea").value;
+	if(comment == ""){
+		alert("Comment can not be empty!");
+	}else{
+		var com = new Array();
+		var commentid = "GC";
+		var i = Number(localStorage.getItem("counter")) + 1;
+		localStorage.setItem("counter",i);
+		var time = new Date();
+		var date = time.getFullYear() + "/" + time.getMonth() + "/" +time.getDate();
+		var cid = commentid + String(localStorage.getItem("counter"));
+		var ctag = document.getElementsByClassName("Comment")[0];
+		var addc = document.createElement("div");
+		var node = document.createTextNode(comment);
+		addc.append(node);
+		var commentdate = document.createElement("span");
+		commentdate.append(date);
+		addc.append(commentdate);
+		ctag.append(addc);
+		com[i] = new obj(comment, date, "zeld");
+		var strcomment = new Array();
+		strcomment[i] = JSON.stringify(com[i]);
+		localStorage[cid] = strcomment[i];
+		document.querySelector("#commentarea").value = "";
+
+
+		//var commentid = "Zeld";
+		//var i = Number(localStorage.getItem("counter")) + 1;
+		//localStorage.setItem("counter",i);
+		//var time = new Date();
+		//var date = time.getFullYear() + "/" + time.getMonth() + "/" +time.getDate();
+		//var cid = commentid + String(localStorage.getItem("counter"));
+		//var ctag = document.getElementsByClassName("Comment")[0];
+		//var addc = document.createElement("div");
+		//var node = document.createTextNode(comment);
+		//addc.append(node);
+		//var commentdate = document.createElement("span");
+		//commentdate.append(date);
+		//addc.append(commentdate);
+		//str = "001" + addc.innerHTML;
+		//localStorage.setItem(cid, addc.innerHTML);
+		//ctag.append(addc);
+		//document.querySelector("#commentarea").value = "";
+	}
 }

@@ -45,6 +45,14 @@ body{
 .plco:hover{
 	cursor: pointer;
 	color: #f1f1f1;
+}		
+.cu a, .do a{
+	font-size: 20px !important;
+	padding-bottom: 5px !important;
+	width: 150px;
+	color: #909090;
+	transition: 0.3s;
+	padding-top: 0px;
 }
 #PfBar a, #CpBar a{
 	font-size: 20px;
@@ -163,7 +171,6 @@ body{
 .BriefPic{
 	width: 300px;
 	height: 168px;
-	border: 2px solid white;
 	border-radius: 2px;
 }
 .GameTextIntro{
@@ -176,21 +183,45 @@ body{
 .BriefInfor{
 	width: 300px;
 	height: 120px;
-	background-color: white;
 }
-.GameTags{
-	width: 300px;
-	height: 300px;
+.Comment div{
+	width: 300px; 
+	_height: 40px; 
+	min-height: 40px; 
+	margin-top: 10px; 
+	background-color: rgba(25, 25, 25, 0.1);
+	box-shadow: 0px 0px 3px grey;
+	border-radius: 3px;
 }
-.GameTags span{
-	padding:2px 8px 2px 8px;
-	border-radius: 10px;
-	font-size: 13px;
-	color: rgb(25, 25, 25);
-	border: 1px solid rgba(25, 25, 25, 0.4);
+.Comment span{
+	display:block; 
+	margin-top: 10px; 
+	margin-right: 5px; 
+	text-align: right;
 }
-.GameTags span:hover{
+.addCoBtn{
+	width: 100px; 
+	height: 30px; 
+	border: 0;
+	border-radius: 3px; 
+	outline-color: black;
+	margin-top: 10px;
+	transition: 0.3s;
+}
+.addCoBtn:hover{
 	cursor: pointer;
+	box-shadow: 0px 0px 3px grey;
+}
+#commentarea{
+	border-radius: 3px; 
+	margin-top: 10px; 
+	outline-color: grey;
+}
+#commentarea::placeholder{
+	color: white;
+}
+#commentarea:focus::placeholder{
+	color: grey;
 }
 .Btn{
 	margin-top: 10px;
