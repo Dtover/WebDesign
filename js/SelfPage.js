@@ -87,7 +87,7 @@ function likesadd(){
 			d3.append(gameinfo.enname);
 			var d4 = document.createElement("div");
 			d4.append(gameinfo.platform);
-			imgpath = "../images/" + gameinfo.enname + ".png";
+			imgpath = "../images/LittlePic/" + gameinfo.enname + ".png";
 			img.src = imgpath;
 			a.href="";
 			D.append(d1);
@@ -102,7 +102,6 @@ function likesadd(){
 		}
 	}
 }
-
 function commentadd(){
 	likesadd();
 	commentid = "GC";
@@ -118,7 +117,7 @@ function commentadd(){
 			Com.className = "com";
 			var newcom = document.createElement("div");
 			var img = document.createElement("img");
-			imgpath = "/home/dreamlocker/WebDesign/images/" + comment[i].game + ".png";
+			imgpath = "../images/LittlePic/" + comment[i].game + ".png";
 			img.height = "100";
 			img.src = imgpath;
 			var textarea = document.createElement("p");

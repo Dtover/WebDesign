@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>GameList</title>
+	<title>Switch Game List</title>
 	<link rel="stylesheet" href="../css/GameList.css" type="text/css">
 	<script src="../js/GameList.js"></script>
+	<style>
+		body{
+			background: url("../images/BGP/ZeldBriefPic.jpg") no-repeat top fixed;
+			background-size: cover;
+		}
+		.Game{
+			background-color: rgba(93, 107, 137, 0.6);
+		}
+		.RLBS, .RLMP{
+			background-color: rgba(93, 107, 137, 0.6);
+		}
+		.GameNameZh>a:hover{
+			color: rgb(109, 166, 205);
+		}
+		#RankingList{
+			border-left: 2px solid rgb(93, 130, 183);
+			background-color: rgba(96,127,174,0.2) ;
+		}
+		#RankingList a:hover{
+			color: rgb(109, 166, 205);
+		}
+		#RankingList a:hover .RLBS{
+			color: black;
+		}
+		#RankingList a:hover .RLMP{
+			color: black;
+		}
+	</style>
 </head>
 	<body style="width: 1450px;">
 		<!--SideBar part -->
@@ -12,8 +40,8 @@
 			<a href="./SelfPage.html">DreamLocker</a>
 			<br>
 			<span class="plco" onclick="Pf()">Platform</span>
-			<div id="PfBar" style="height: 0px;">
-				<a href="./SwitchGL.html">Switch</a>
+			<div id="PfBar" style="height: 160px;">
+				<a style="color: white;" href="./SwitchGL.html">Switch</a>
 				<a href="./PS4GL.html">PS4</a>
 				<a href="./XBOXGL.html">Xbox</a>
 				<a href="./OtherPlatformsGL.html">Others</a>
@@ -120,7 +148,7 @@
 			</div>
 			<div id="Game04" class="Game">
 				<div class="GameCover">
-					<img src="../images/LittlePic/Breathe of Wild.png" width="130px">
+					<img src="../images/001LegendofZeld.png" width="130px">
 				</div>				
 				<div class="GameInfo">
 					<div>
@@ -340,9 +368,9 @@
 		<div id="RankingList">
 			<div class="BestScore">
 				<ul style="list-style: none;">
-					<span style="font-size: 20px; color: #F5E871;">Best score(IGN)</span>
+					<span style="font-size: 20px; color:#2d2e31;">Best score(IGN)</span>
 					<li>
-						<a class="rlbs" id="rlbs01" href="./GameInfors/Zeld.html" onmouseover="RLlittleInforOpen(1)" onmouseout="RLlittleInforClose(1)">1. 旷野之息
+						<a class="rlbs" id="rlbs01" href="./Zeld.html" onmouseover="RLlittleInforOpen(1)" onmouseout="RLlittleInforClose(1)">1. 旷野之息
 							<div class="RLBS" id="RLBS01">
 								<img style="float: left;" src="../images/LittlePic/Breathe of Wild.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px;"><br>&nbsp;&nbsp;&nbsp;Legend of Zeld<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 10.0</span>
@@ -350,7 +378,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs02" href="" onmouseover="RLlittleInforOpen(2)" onmouseout="RLlittleInforClose(2)">2. 超级马里奥：奥德赛
+						<a class="rlbs" id="rlbs02" href="./Odyssey.html" onmouseover="RLlittleInforOpen(2)" onmouseout="RLlittleInforClose(2)">2. 超级马里奥：奥德赛
 							<div class="RLBS" id="RLBS02">
 								<img style="float: left;" src="../images/LittlePic/Mario: Odyssey.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px; line-height: 28px;">&nbsp;&nbsp;&nbsp;Super Mario:<br>&nbsp;&nbsp; Odyssey<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.6</span>
@@ -358,7 +386,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs03" href="" onmouseover="RLlittleInforOpen(3)" onmouseout="RLlittleInforClose(3)">3. 极限竞速:地平线4
+						<a class="rlbs" id="rlbs03" href="./ForzaHorizon4.html" onmouseover="RLlittleInforOpen(3)" onmouseout="RLlittleInforClose(3)">3. 极限竞速:地平线4
 							<div class="RLBS" id="RLBS03">
 								<img style="float: left;" src="../images/LittlePic/Forza Horizon 4.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px;"><br>&nbsp;&nbsp;&nbsp;Forza Horizon4: <br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.6</span>
@@ -366,7 +394,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs04" href="" onmouseover="RLlittleInforOpen(4)" onmouseout="RLlittleInforClose(4)">4. 只狼：影逝二度
+						<a class="rlbs" id="rlbs04" href="./SEKIRO.html" onmouseover="RLlittleInforOpen(4)" onmouseout="RLlittleInforClose(4)">4. 只狼：影逝二度
 							<div class="RLBS" id="RLBS04">
 								<img style="float: left;" src="../images/LittlePic/SEKIRO.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px;"><br>&nbsp;&nbsp;&nbsp;SEKIRO<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.6</span>
@@ -374,7 +402,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs05" href="" onmouseover="RLlittleInforOpen(5)" onmouseout="RLlittleInforClose(5)">5. 女神异闻录5
+						<a class="rlbs" id="rlbs05" href="./Persiona5.html" onmouseover="RLlittleInforOpen(5)" onmouseout="RLlittleInforClose(5)">5. 女神异闻录5
 							<div class="RLBS" id="RLBS05">
 								<img style="float: left;" src="../images/LittlePic/Persona 5.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px;"><br>&nbsp;&nbsp;&nbsp;Persona5<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.6</span>
@@ -382,7 +410,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs06" href="" onmouseover="RLlittleInforOpen(6)" onmouseout="RLlittleInforClose(6)">6. 战神
+						<a class="rlbs" id="rlbs06" href="./GodofWar4.html" onmouseover="RLlittleInforOpen(6)" onmouseout="RLlittleInforClose(6)">6. 战神
 							<div class="RLBS" id="RLBS06">
 								<img style="float: left;" src="../images/LittlePic/God of War 4.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px;"><br>&nbsp;&nbsp;&nbsp;God of War<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.6</span>
@@ -390,7 +418,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs07" href="" onmouseover="RLlittleInforOpen(7)" onmouseout="RLlittleInforClose(7)">7. 侠盗猎车手5
+						<a class="rlbs" id="rlbs07" href="./Grand5.html" onmouseover="RLlittleInforOpen(7)" onmouseout="RLlittleInforClose(7)">7. 侠盗猎车手5
 							<div class="RLBS" id="RLBS07">
 								<img style="float: left;" src="../images/LittlePic/Grand Theft Auto 5.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px; line-height: 28px;">&nbsp;&nbsp;Grand Theft<br>&nbsp; Auto V<br>&nbsp;&nbsp;IGN SCORE: 9.6</span>
@@ -398,7 +426,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs08" href="" onmouseover="RLlittleInforOpen(8)" onmouseout="RLlittleInforClose(8)">8.超级玛丽欧创作家2
+						<a class="rlbs" id="rlbs08" href="./MarioMaker2.html" onmouseover="RLlittleInforOpen(8)" onmouseout="RLlittleInforClose(8)">8.超级玛丽欧创作家2
 							<div class="RLBS" id="RLBS08">
 								<img style="float: left;" src="../images/LittlePic/Super Mario Maker 2.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px; line-height: 28px;">&nbsp;&nbsp;&nbsp;Super Mario<br>&nbsp;&nbsp;&nbsp;Maker2<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.5</span>
@@ -409,9 +437,9 @@
 			</div>
 			<div class="MostPopular">
 				<ul style="list-style: none;">
-					<span style="font-size: 20px; color: #F5E871;" >Most Popular</span>
+					<span style="font-size: 20px; color:#2d2e31;" >Most Popular</span>
 					<li>
-						<a class="rlmp" id="rlmp01" href="" onmouseover="MPlittleInforOpen(1)" onmouseout="MPlittleInforClose(1)">1. 塞尔达传说：旷野之息
+						<a class="rlmp" id="rlmp01" href="./Zeld.html" onmouseover="MPlittleInforOpen(1)" onmouseout="MPlittleInforClose(1)">1. 塞尔达传说：旷野之息
 							<div class="RLMP" id="RLMP01">
 								<img style="float: left;" src="../images/LittlePic/Breathe of Wild.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px;"><br>&nbsp;&nbsp;&nbsp;Legend of Zeld<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 10.0</span>
@@ -427,7 +455,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlmp" id="rlmp03" href="" onmouseover="MPlittleInforOpen(3)" onmouseout="MPlittleInforClose(3)">3. 超级玛丽欧创作家2
+						<a class="rlmp" id="rlmp03" href="./MarioMaker2.html" onmouseover="MPlittleInforOpen(3)" onmouseout="MPlittleInforClose(3)">3. 超级玛丽欧创作家2
 							<div class="RLMP" id="RLMP03">
 								<img style="float: left;" src="../images/LittlePic/Super Mario Maker 2.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px; line-height: 28px;">&nbsp;&nbsp;&nbsp;Super Mario<br>&nbsp;&nbsp;&nbsp;Maker2 <br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.6</span>
@@ -467,7 +495,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlmp" id="rlmp08" href="" onmouseover="MPlittleInforOpen(8)" onmouseout="MPlittleInforClose(8)">8. 女神异闻录5
+						<a class="rlmp" id="rlmp08" href="./Persiona5.html" onmouseover="MPlittleInforOpen(8)" onmouseout="MPlittleInforClose(8)">8. 女神异闻录5
 							<div class="RLMP" id="RLMP08">
 								<img style="float: left;" src="../images/LittlePic/Persona 5.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px;"><br>&nbsp;&nbsp;&nbsp;Persona5 <br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.7</span>
@@ -476,8 +504,6 @@
 					</li>
 				</ul>
 			</div>
-			<div></div>
-			<div></div>				
 		</div>
 	</body>
 </html>

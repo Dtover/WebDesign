@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Legend of Zeld</title>
+	<link rel="stylesheet" href="../css/Zeld.css" type="text/css">
+	<script src="../js/Zeld.js"></script>
+</head>
+<body onload="loadcomment()">
+		<!--SideBar part -->
+		<div id="mySidenav" class="sidenav">
+			<a href="/home/dreamlocker/WebDesign/Mainpage/SelfPage.html">DreamLocker</a>
+			<br>
+			<span class="plco" onclick="Pf()">Platform</span>
+			<div id="PfBar" style="height: 160px;">
+				<a href="../SwitchGL.html">Switch</a>
+				<a href="../PS4GL.html">PS4</a>
+				<a href="../XBOXGL.html">Xbox</a>
+				<a href="../OtherPlatformsGL.html">Others</a>
+			</div>
+			<span class="plco" onclick="Cp()">Company</span>
+			<div id="CpBar" style="height: 160px;">
+				<a href="../NintendoGL.html">Nintendo</a>
+				<a href="../PS4GL.html">Sony</a>
+				<a href="../MicrosoftGL.html">Microsoft</a>
+				<a href="../OtherCompanyGL.html">Others</a>
+			</div>
+			<div class="cu"><a href="">Connect us</a></div>
+			<div class="do"><a href="">Donate</a></div>
+		</div>
+		<div style="font-size: 20px; font-weight: bold; margin-left: 350px; margin-top: 40px; position: absolute;">塞尔达传说：旷野之息</div>
+		<div style="font-size: 20px; margin-left: 350px; margin-top: 74px; position: absolute;">Legend of Zeld:the Breathe of Wild</div>
+		<div class="PicChanging">
+			<div class="PicShowPart"><img id="Pic" src="./Gimgs/Zeld/01.jpg" width="600px"></div>
+			<div class="ControlPart">
+				<div class="CP" id="CP1" onclick="PicChange(1)" ></div>
+				<div class="CP" id="CP2" onclick="PicChange(2)" ></div>
+				<div class="CP" id="CP3" onclick="PicChange(3)" ></div>
+				<div class="CP" id="CP4" onclick="PicChange(4)" ></div>
+			</div>
+		</div>
+		<div class="GameInfor">
+			<div class="BriefPic"><img src="Gimgs/Zeld/BriefPic.jpg" width="300px"></div>
+			<div class="BriefInfor">
+				<div style="font-size: 30px; font-weight: bolder;"> 10.0 </div>
+				<div>
+					<span style="color: grey;">游戏平台：</span>
+					<a href="">Switch</a>
+					<a href="">WiiU</a>
+				</div>
+				<div>
+					<span style="color: grey;">游戏类型：</span>
+					<span>动作</span>
+					<span>冒险</span>
+					<span>沙箱</span>
+				</div>
+				<div>
+					<span style="color: grey;">发行公司：</span>
+					<a href="">Nintendo</a>
+				</div>
+			</div>
+			<div>
+				<div class="Btn" id="LikeBtn" onclick="Like()">Like it</div>
+				<div class="Btn" id="HateBtn" onclick="Hate()">Hate it</div>
+			</div>
+			<div>
+				<div class="Comment">
+					<p style="margin-top: 10px; color: grey;">Game Comments</p>
+					<div>
+						<p>满分并不意味着这个游戏是完美无缺的，给予如此的评价无非是向制作人员对游戏本质的不懈追求表示我们最高敬意！</p>
+						<span>on 2019/10/11</span>
+					</div>
+					<div>
+						<p>无可争议的神作</p>	
+						<span>on 2019/10/11</span>
+					</div>
+					<div>
+						<p>这是一款为了玩到它值得买一款主机的游戏</p>
+						<span>on 2019/10/11</span>
+					</div>
+					<div>
+						<p>无可挑剔的艺术品</p>	
+						<span>on 2019/10/11</span>
+					</div>
+					<div>
+						<p>满分并不意味着这个游戏是完美无缺的，给予如此的评价无非是向制作人员对游戏本质的不懈追求表示我们最高敬意！</p>
+						<span>on 2019/10/11</span>
+					</div>
+					<div>
+						<p>无可争议的神作</p>	
+						<span>on 2019/10/11</span>
+					</div>
+				</div>
+				<textarea name="" id="commentarea" cols="37" rows="5" placeholder="Say something"></textarea>
+				<button class="addCoBtn" onclick="AddComment()">add comments</button>
+			</div>
+		</div>
+		<div class="GameTextIntro">
+			<br>
+			<br>
+			<h3>编辑的话</h3>
+			<p>《旷野之息》将像它的那些前辈一样，成为了电子游戏发展史的又一个里程碑。它会为未来数年甚至十几年的游戏开发者带去无数的灵感，会被下一代的很多游戏“致敬”。<p>
+			<br>
+			<br>
+			<h3>关于游戏</h3>
+			<p>《塞尔达传说》系列首部登陆任天堂Switch主机的作品，本作也是系列第一款开放世界作品，玩家可以脱出此前的各种限制，在广阔的世界中自由探索。
+
+游戏故事依然是林克拯救世界的故事，海拉尔大陆再次被加农侵袭，林克从长眠中醒来，在冒险中获得武器、能力，最后去挑战加农。但你也可以直接去干掉加农，本作的自由度是系列前所未有的。
+
+在《塞尔达传说 旷野之息》中，林克从一开始就获得了所有道具能力，并且可以和世界中的各种要素进行互动。大自然的风火雷电都可以被利用，让林克的冒险有层出不穷的玩法。
+
+本作中文版于2018年2月1日推出，中文版标题为《塞尔达传说：旷野之息》。<p>
+		</div>
+		<div class="RelatedGames">
+			<h3>相关游戏：</h3>
+			<a class="RGame" href="../GameList.html">
+				<img style="float: left; margin-right: 10px;" src="../images/LittlePic/Mario Odyssey.png" height="100px">
+				<div style="float: left;">
+					<div style="font-size: 20px; margin-top: 5px;">9.5</div>
+					<div style="font-size: 15px; font-weight: bold;">马里奥：奥德赛</div>
+					<div style="font-size: 13px;">Mario : Odyssey</div>
+					<div style="font-size: 12px; color: grey;margin-top: 20px;">NS</div>
+				</div>
+			</a>
+			<a class="RGame" href="../GameList.html">
+				<img style="float: left; margin-right: 10px;" src="../images/LittlePic/Grand Theft Auto5.png" height="100px">
+				<div style="float: left;">
+					<div style="font-size: 20px; margin-top: 5px;">9.0</div>
+					<div style="font-size: 15px; font-weight: bold;">侠盗猎车手5</div>
+					<div style="font-size: 13px;">Grand Theft Auto5</div>
+					<div style="font-size: 12px; color: grey;margin-top: 20px;">PS4,PC</div>
+				</div>
+			</a>
+			<a class="RGame" href="../GameList.html">
+				<img style="float: left; margin-right: 10px;" src="../images/LittlePic/Super Mario Maker2.png" height="100px">
+				<div style="float: left;">
+					<div style="font-size: 20px; margin-top: 5px;">9.5</div>
+					<div style="font-size: 15px; font-weight: bold;">超级马里奥制造2</div>
+					<div style="font-size: 13px;">Super Mario Maker2</div>
+					<div style="font-size: 12px; color: grey;margin-top: 20px;">NS</div>
+				</div>
+			</a>
+			<a class="RGame" href="../GameList.html">
+				<img style="float: left; margin-right: 5px;" src="../images/LittlePic/Super Smash Bros.png" height="100px">
+				<div style="float: left;">
+					<div style="font-size: 20px; margin-top: 5px;">8.9</div>
+					<div style="font-size: 13px; font-weight: bold;">任天堂全明星大乱斗</div>
+					<div style="font-size: 13px;">Super Smash Bros</div>
+					<div style="font-size: 12px; color: grey;margin-top: 20px;">NS</div>
+				</div>
+			</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>God of War 4</title>
+	<link rel="stylesheet" href="../css/Zeld.css" type="text/css">
+	<script src="../js/GodofWar4.js"></script>
+	<style>
+		#CP1{
+			background: url("../Mainpage/Gimgs/GodofWar4/01.jpg") no-repeat;
+			background-size: 100px auto;
+		}
+		#CP2{
+			background: url("../Mainpage/Gimgs/GodofWar4/02.jpg") no-repeat;
+			background-size: 100px auto;
+		}
+		#CP3{
+			background: url("../Mainpage/Gimgs/GodofWar4/03.jpg") no-repeat;
+			background-size: 100px auto;
+		}
+		#CP4{
+			background: url("../Mainpage/Gimgs/GodofWar4/04.jpg") no-repeat;
+			background-size: 100px auto;
+		}
+	</style>
+</head>
+<body onload="loadcomment()">
+		<!--SideBar part -->
+		<div id="mySidenav" class="sidenav">
+			<a href="./SelfPage.html">DreamLocker</a>
+			<br>
+			<span class="plco" onclick="Pf()">Platform</span>
+			<div id="PfBar" style="height: 160px;">
+				<a href="../SwitchGL.html">Switch</a>
+				<a href="../PS4GL.html">PS4</a>
+				<a href="../XBOXGL.html">Xbox</a>
+				<a href="../OtherPlatformsGL.html">Others</a>
+			</div>
+			<span class="plco" onclick="Cp()">Company</span>
+			<div id="CpBar" style="height: 160px;">
+				<a href="../NintendoGL.html">Nintendo</a>
+				<a href="../PS4GL.html">Sony</a>
+				<a href="../MicrosoftGL.html">Microsoft</a>
+				<a href="../OtherCompanyGL.html">Others</a>
+			</div>
+			<div class="cu"><a href="">Connect us</a></div>
+			<div class="do"><a href="">Donate</a></div>
+		</div>
+		<div style="font-size: 20px; font-weight: bold; margin-left: 350px; margin-top: 40px; position: absolute;">战神 4</div>
+		<div style="font-size: 20px; margin-left: 350px; margin-top: 74px; position: absolute;">God of War 4</div>
+		<div class="PicChanging">
+			<div class="PicShowPart"><img id="Pic" src="./Gimgs/GodofWar4/01.jpg" width="600px"></div>
+			<div class="ControlPart">
+				<div class="CP" id="CP1" onclick="PicChange(1)" ></div>
+				<div class="CP" id="CP2" onclick="PicChange(2)" ></div>
+				<div class="CP" id="CP3" onclick="PicChange(3)" ></div>
+				<div class="CP" id="CP4" onclick="PicChange(4)" ></div>
+			</div>
+		</div>
+		<div class="GameInfor">
+			<div class="BriefPic"><img src="Gimgs/GodofWar4/BriefPic.jpg" width="300px"></div>
+			<div class="BriefInfor">
+				<div style="font-size: 30px; font-weight: bolder;">9.5</div>
+				<div>
+					<span style="color: grey;">游戏平台：</span>
+					<a href="">PS4</a>
+				</div>
+				<div>
+					<span style="color: grey;">游戏类型：</span>
+					<span>动作</span>
+					<span>角色扮演</span>
+					<span>第三人称</span>
+				</div>
+				<div>
+					<span style="color: grey;">发行公司：</span>
+					<a href="">SONY</a>
+				</div>
+			</div>
+			<div>
+				<div class="Btn" id="LikeBtn" onclick="Like()">Like it</div>
+				<div class="Btn" id="HateBtn" onclick="Hate()">Hate it</div>
+			</div>
+			<div>
+				<div class="Comment">
+					<p style="margin-top: 10px; color: grey;">Game Comments</p>
+					<div>
+						<p>满分并不意味着这个游戏是完美无缺的，给予如此的评价无非是向制作人员对游戏本质的不懈追求表示我们最高敬意！</p>
+						<span>on 2019/10/11</span>
+					</div>
+					<div>
+						<p>无可争议的神作</p>	
+						<span>on 2019/10/11</span>
+					</div>
+					<div>
+						<p>这是一款为了玩到它值得买一款主机的游戏</p>
+						<span>on 2019/10/11</span>
+					</div>
+					<div>
+						<p>无可挑剔的艺术品</p>	
+						<span>on 2019/10/11</span>
+					</div>
+					<div>
+						<p>满分并不意味着这个游戏是完美无缺的，给予如此的评价无非是向制作人员对游戏本质的不懈追求表示我们最高敬意！</p>
+						<span>on 2019/10/11</span>
+					</div>
+					<div>
+						<p>无可争议的神作</p>	
+						<span>on 2019/10/11</span>
+					</div>
+				</div>
+				<textarea name="" id="commentarea" cols="37" rows="5" placeholder="Say something"></textarea>
+				<button class="addCoBtn" onclick="AddComment()">add comments</button>
+			</div>
+		</div>
+		<div class="GameTextIntro">
+			<br>
+			<br>
+			<h3>编辑的话</h3>
+			<p>圣莫妮卡工作室集结了目前最先进的开发技术，最具有创意的开发团队，花费五年的时间来开发出新《战神》这样一款游戏，它足以代表当今游戏工业的最高水准。</p>
+			<br>
+			<br>
+			<h3>关于游戏</h3>
+			<p>《战神》是动作角色扮演类游戏《战神》系列的新作，本作的主角奎托斯依然是《战神3》中的那位奎托斯，但他已经有几分苍老，变成了大胡子，也不如之前那般易怒。游戏中登场的主角还有他的儿子阿特柔斯，但可操作的角色依然只有奎托斯一人。这次游戏的舞台从希腊转移到了北欧，游戏的设定方面也采用了诸多北欧神话设定，比如北欧诸神、卢恩符文等。《战神》虽然不会是开放世界，但能探索的面积比过去大得多，本作还会有类似RPG游戏的角色培养、武器升级、道具制作系统。</p>
+		</div>
+		<div class="RelatedGames">
+			<h3>相关游戏：</h3>
+			<a class="RGame" href="../GameList.html">
+				<img style="float: left; margin-right: 10px;" src="../images/LittlePic/Breathe of Wild.png" height="100px">
+				<div style="float: left;">
+					<div style="font-size: 20px; margin-top: 5px;">10.0</div>
+					<div style="font-size: 15px; font-weight: bold;">旷野之息</div>
+					<div style="font-size: 13px;">Breathe of Wild</div>
+					<div style="font-size: 12px; color: grey;margin-top: 20px;">NS,WiiU</div>
+				</div>
+			</a>
+			<a class="RGame" href="../GameList.html">
+				<img style="float: left; margin-right: 10px;" src="../images/LittlePic/Grand Theft Auto5.png" height="100px">
+				<div style="float: left;">
+					<div style="font-size: 20px; margin-top: 5px;">9.0</div>
+					<div style="font-size: 15px; font-weight: bold;">侠盗猎车手5</div>
+					<div style="font-size: 13px;">Grand Theft Auto5</div>
+					<div style="font-size: 12px; color: grey;margin-top: 20px;">PS4,PC</div>
+				</div>
+			</a>
+			<a class="RGame" href="../GameList.html">
+				<img style="float: left; margin-right: 10px;" src="../images/LittlePic/Super Mario Maker2.png" height="100px">
+				<div style="float: left;">
+					<div style="font-size: 20px; margin-top: 5px;">9.5</div>
+					<div style="font-size: 15px; font-weight: bold;">超级马里奥制造2</div>
+					<div style="font-size: 13px;">Super Mario Maker2</div>
+					<div style="font-size: 12px; color: grey;margin-top: 20px;">NS</div>
+				</div>
+			</a>
+			<a class="RGame" href="../GameList.html">
+				<img style="float: left; margin-right: 5px;" src="../images/LittlePic/Super Smash Bros.png" height="100px">
+				<div style="float: left;">
+					<div style="font-size: 20px; margin-top: 5px;">8.9</div>
+					<div style="font-size: 13px; font-weight: bold;">任天堂全明星大乱斗</div>
+					<div style="font-size: 13px;">Super Smash Bros</div>
+					<div style="font-size: 12px; color: grey;margin-top: 20px;">NS</div>
+				</div>
+			</a>
+		</div>
+	</body>
+</html>
