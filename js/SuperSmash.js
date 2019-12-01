@@ -59,10 +59,10 @@ function Cp(){
 
 }
 var picnum = new Array();
-picnum[1] = "../Mainpage/Gimgs/Zeld/01.jpg";
-picnum[2] = "../Mainpage/Gimgs/Zeld/02.jpg";
-picnum[3] = "../Mainpage/Gimgs/Zeld/03.jpg";
-picnum[4] = "../Mainpage/Gimgs/Zeld/04.jpg";
+picnum[1] = "../Mainpage/Gimgs/SuperSmash/01.jpg";
+picnum[2] = "../Mainpage/Gimgs/SuperSmash/02.jpg";
+picnum[3] = "../Mainpage/Gimgs/SuperSmash/03.jpg";
+picnum[4] = "../Mainpage/Gimgs/SuperSmash/04.jpg";
 function PicChange(id){
 	document.getElementById("Pic").src = picnum[id];
 	var ID = "CP" + id;
@@ -120,13 +120,15 @@ function AddComment(){
 	if(comment == ""){
 		alert("Comment can not be empty!");
 	}else{
-		var com = new Array();
-		var commentid = "GC";
-		var i = Number(localStorage.getItem("counter")) + 1;
-		localStorage.setItem("counter",i);
+		var isexist = localStorage.getItem("gc9");
+		if(isexist == null){
+			var gc9 = new Array();
+		}else{
+			var gc9 = JSON.parse(isexist);
+		}
+		var i = Number(localStorage.getItem("counter9"));
 		var time = new Date();
 		var date = "on " + time.getFullYear() + "/" + time.getMonth() + "/" +time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
-		var cid = commentid + String(localStorage.getItem("counter"));
 		var ctag = document.getElementsByClassName("Comment")[0];
 		var addc = document.createElement("div");
 		var node = document.createTextNode(comment);
@@ -135,27 +137,9 @@ function AddComment(){
 		commentdate.append(date);
 		addc.append(commentdate);
 		ctag.append(addc);
-		com[i] = new obj(comment, date, "Breathe of Wild");
-		var strcomment = new Array();
-		strcomment[i] = JSON.stringify(com[i]);
-		localStorage[cid] = strcomment[i];
+		gc9[i] = new obj(comment, date, "Super Smash Bros");
+		localStorage["gc9"] = JSON.stringify(gc9);
+		localStorage["counter9"] = Number(localStorage.getItem("counter9")) + 1;
 		document.querySelector("#commentarea").value = "";
-		//var commentid = "Zeld";
-		//var i = Number(localStorage.getItem("counter")) + 1;
-		//localStorage.setItem("counter",i);
-		//var time = new Date();
-		//var date = time.getFullYear() + "/" + time.getMonth() + "/" +time.getDate();
-		//var cid = commentid + String(localStorage.getItem("counter"));
-		//var ctag = document.getElementsByClassName("Comment")[0];
-		//var addc = document.createElement("div");
-		//var node = document.createTextNode(comment);
-		//addc.append(node);
-		//var commentdate = document.createElement("span");
-		//commentdate.append(date);
-		//addc.append(commentdate);
-		//str = "001" + addc.innerHTML;
-		//localStorage.setItem(cid, addc.innerHTML);
-		//ctag.append(addc);
-		//document.querySelector("#commentarea").value = "";
 	}
 }

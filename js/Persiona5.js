@@ -1,22 +1,18 @@
 function loadcomment(){
-	commentid = "GC";
-	for(var i = 1; i <= Number(localStorage.getItem("counter")); i++)	{
-		var cid = commentid + String(i);
-		var strcomment = new Array();
-		strcomment[i] = localStorage.getItem(cid);
-		var comment = new Array();
-		comment[i] = JSON.parse(strcomment[i]);
-		if( comment[i] != null){
+	var str = localStorage.getItem("gc7");
+	var gc7 = JSON.parse(str);
+	for(var i = 0; i < Number(localStorage.getItem("counter7")); i++)	{
+		if(gc7[i] != null){
 			var ctag = document.getElementsByClassName("Comment")[0];
 			var addc = document.createElement("div");
-			var node = document.createTextNode(comment[i].comment);
+			var node = document.createTextNode(gc7[i].comment);
 			addc.append(node);
 			var commentdate = document.createElement("span");
-			commentdate.append(comment[i].date);
+			commentdate.append(gc7[i].date);
 			addc.append(commentdate);
 			ctag.append(addc);
 		}else{
-		  break;
+			break;
 		}
 	}
 }
@@ -120,13 +116,15 @@ function AddComment(){
 	if(comment == ""){
 		alert("Comment can not be empty!");
 	}else{
-		var com = new Array();
-		var commentid = "GC";
-		var i = Number(localStorage.getItem("counter")) + 1;
-		localStorage.setItem("counter",i);
+		var isexist = localStorage.getItem("gc7");
+		if(isexist == null){
+			var gc7 = new Array();
+		}else{
+			var gc7 = JSON.parse(isexist);
+		}
+		var i = Number(localStorage.getItem("counter7"));
 		var time = new Date();
 		var date = "on " + time.getFullYear() + "/" + time.getMonth() + "/" +time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
-		var cid = commentid + String(localStorage.getItem("counter"));
 		var ctag = document.getElementsByClassName("Comment")[0];
 		var addc = document.createElement("div");
 		var node = document.createTextNode(comment);
@@ -135,27 +133,9 @@ function AddComment(){
 		commentdate.append(date);
 		addc.append(commentdate);
 		ctag.append(addc);
-		com[i] = new obj(comment, date, "Persona 5");
-		var strcomment = new Array();
-		strcomment[i] = JSON.stringify(com[i]);
-		localStorage[cid] = strcomment[i];
+		gc7[i] = new obj(comment, date, "Persona 5");
+		localStorage["gc7"] = JSON.stringify(gc7);
+		localStorage["counter7"] = Number(localStorage.getItem("counter7")) + 1;
 		document.querySelector("#commentarea").value = "";
-		//var commentid = "Zeld";
-		//var i = Number(localStorage.getItem("counter")) + 1;
-		//localStorage.setItem("counter",i);
-		//var time = new Date();
-		//var date = time.getFullYear() + "/" + time.getMonth() + "/" +time.getDate();
-		//var cid = commentid + String(localStorage.getItem("counter"));
-		//var ctag = document.getElementsByClassName("Comment")[0];
-		//var addc = document.createElement("div");
-		//var node = document.createTextNode(comment);
-		//addc.append(node);
-		//var commentdate = document.createElement("span");
-		//commentdate.append(date);
-		//addc.append(commentdate);
-		//str = "001" + addc.innerHTML;
-		//localStorage.setItem(cid, addc.innerHTML);
-		//ctag.append(addc);
-		//document.querySelector("#commentarea").value = "";
 	}
 }

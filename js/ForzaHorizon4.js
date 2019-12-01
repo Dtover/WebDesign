@@ -1,22 +1,18 @@
 function loadcomment(){
-	commentid = "GC";
-	for(var i = 1; i <= Number(localStorage.getItem("counter")); i++)	{
-		var cid = commentid + String(i);
-		var strcomment = new Array();
-		strcomment[i] = localStorage.getItem(cid);
-		var comment = new Array();
-		comment[i] = JSON.parse(strcomment[i]);
-		if( comment[i] != null){
+	var str = localStorage.getItem("gc6");
+	var gc6 = JSON.parse(str);
+	for(var i = 0; i < Number(localStorage.getItem("counter6")); i++)	{
+		if(gc6[i] != null){
 			var ctag = document.getElementsByClassName("Comment")[0];
 			var addc = document.createElement("div");
-			var node = document.createTextNode(comment[i].comment);
+			var node = document.createTextNode(gc6[i].comment);
 			addc.append(node);
 			var commentdate = document.createElement("span");
-			commentdate.append(comment[i].date);
+			commentdate.append(gc6[i].date);
 			addc.append(commentdate);
 			ctag.append(addc);
 		}else{
-		  break;
+			break;
 		}
 	}
 }
@@ -120,13 +116,15 @@ function AddComment(){
 	if(comment == ""){
 		alert("Comment can not be empty!");
 	}else{
-		var com = new Array();
-		var commentid = "GC";
-		var i = Number(localStorage.getItem("counter")) + 1;
-		localStorage.setItem("counter",i);
+		var isexist = localStorage.getItem("gc6");
+		if(isexist == null){
+			var gc6 = new Array();
+		}else{
+			var gc6 = JSON.parse(isexist);
+		}
+		var i = Number(localStorage.getItem("counter6"));
 		var time = new Date();
 		var date = "on " + time.getFullYear() + "/" + time.getMonth() + "/" +time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
-		var cid = commentid + String(localStorage.getItem("counter"));
 		var ctag = document.getElementsByClassName("Comment")[0];
 		var addc = document.createElement("div");
 		var node = document.createTextNode(comment);
@@ -135,27 +133,9 @@ function AddComment(){
 		commentdate.append(date);
 		addc.append(commentdate);
 		ctag.append(addc);
-		com[i] = new obj(comment, date, "Forza Horizon 4");
-		var strcomment = new Array();
-		strcomment[i] = JSON.stringify(com[i]);
-		localStorage[cid] = strcomment[i];
+		gc6[i] = new obj(comment, date, "Forza Horizon 4");
+		localStorage["gc6"] = JSON.stringify(gc6);
+		localStorage["counter6"] = Number(localStorage.getItem("counter6")) + 1;
 		document.querySelector("#commentarea").value = "";
-		//var commentid = "Zeld";
-		//var i = Number(localStorage.getItem("counter")) + 1;
-		//localStorage.setItem("counter",i);
-		//var time = new Date();
-		//var date = time.getFullYear() + "/" + time.getMonth() + "/" +time.getDate();
-		//var cid = commentid + String(localStorage.getItem("counter"));
-		//var ctag = document.getElementsByClassName("Comment")[0];
-		//var addc = document.createElement("div");
-		//var node = document.createTextNode(comment);
-		//addc.append(node);
-		//var commentdate = document.createElement("span");
-		//commentdate.append(date);
-		//addc.append(commentdate);
-		//str = "001" + addc.innerHTML;
-		//localStorage.setItem(cid, addc.innerHTML);
-		//ctag.append(addc);
-		//document.querySelector("#commentarea").value = "";
 	}
 }

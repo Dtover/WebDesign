@@ -18,17 +18,18 @@ body{
 */
 .GICintrobtn{
 	font-size: 15px; 
-	color: green; 
+	color: #a3a7a7;
+	margin-top: 5px;
 	float: left;
 }
 .GICintrobtn:hover{
 	cursor: pointer;
-	color: rgba(27, 128, 27, 0.8);
+	color: grey;
 }
 #GICintro{
 	position: fixed;
-	top: 280px;
-	left: 360px;
+	top: 320px;
+	left: 340px;
 	width: 210px;
 	height: 100px;
 	visibility: hidden;
@@ -40,24 +41,25 @@ body{
 }
 @-webkit-keyframes gicin{
 	from {left: 100px;opacity: 0;}
-	to {left: 360px; opacity: 1;}
+	to {left: 340px; opacity: 1;}
 }
 @-webkit-keyframes gicout {
-	from {left: 360px; opacity: 1;}
+	from {left: 340px; opacity: 1;}
 	to {left: 100;opacity: 0;}
 }
 @keyframes gicin {
 	from {left: 100;opacity: 0;}
-	to {left: 360px; opacity: 1;}
+	to {left: 340px; opacity: 1;}
 }
 @keyframes gicout {
-	from {left: 360px; opacity: 1;}
+	from {left: 340px; opacity: 1;}
 	to {left: 100;opacity: 0;}
 }
 .signin{
 	color: grey;
 	margin-top: 10px;
 	float: right;
+	margin-right: 10px;
 	transform: 0.2s;
 }
 .signin:hover{
@@ -72,15 +74,23 @@ body{
 	top: 260px;
 	left: 575px;
 	background-color: rgba(120,120,120,0.5);
-	box-shadow: 0px 0px 1px grey;
+	box-shadow: 0px 0px 2px grey;
 	z-index: 1;
 }
 #Welcome{
 	position: fixed;
-	left: 590px;
+	left: 560px;
 	top: 280px;
 	z-index: 2;
 }
+#Title{
+	width: 330px; 
+	border-radius: 20px; 
+	background-color: #a3a7a7; 
+	box-shadow: 0px 0px 4px grey;
+	padding: 1px 10px 1px 10px;
+}
+
 #LoginPart.LoginPartShow{
 	visibility: visible;
 	-webkit-animation: fadein 0.8s;

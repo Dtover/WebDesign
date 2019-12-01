@@ -104,52 +104,40 @@ function likesadd(){
 }
 function commentadd(){
 	likesadd();
-	commentid = "GC";
-	for(var i = 1; i <= Number(localStorage.getItem("counter")); i++)	{
-		var cid = commentid + String(i);
-		var strcomment = new Array();
-		strcomment[i] = localStorage.getItem(cid);
-		var comment = new Array();
-		comment[i] = JSON.parse(strcomment[i]);
-		if(comment[i] != null){
-			var c = document.getElementById("Comment");
-			var Com = document.createElement("div");
-			Com.className = "com";
-			var newcom = document.createElement("div");
-			var img = document.createElement("img");
-			imgpath = "../images/LittlePic/" + comment[i].game + ".png";
-			img.height = "100";
-			img.src = imgpath;
-			var textarea = document.createElement("p");
-			textarea.append(comment[i].comment);
-			var datearea = document.createElement("span");
-			datearea.append(comment[i].date);
-			newcom.append(textarea);
-			newcom.append(datearea);
-			Com.append(img);
-			Com.append(newcom);
-			c.append(Com);
-		}else{
-		  break;
+	for(var j = 0; j < 10; j++){
+		var countnum = "counter" + String(j);
+		var gcnum = "gc" + String(j);
+		var content = JSON.parse(localStorage.getItem(gcnum));
+		for(var i = 0; i < Number(localStorage.getItem(countnum)); i++)	{
+			if(content[i] != null){
+				var c = document.getElementById("Comment");
+				var Com = document.createElement("div");
+				Com.className = "com";
+				var newcom = document.createElement("div");
+				var img = document.createElement("img");
+				imgpath = "../images/LittlePic/" + content[i].game + ".png";
+				img.height = "100";
+				img.src = imgpath;
+				var textarea = document.createElement("p");
+				textarea.append(content[i].comment);
+				var datearea = document.createElement("span");
+				datearea.append(content[i].date);
+				newcom.append(textarea);
+				newcom.append(datearea);
+				Com.append(img);
+				Com.append(newcom);
+				c.append(Com);
+			}else{
+				break;
+			}
 		}
 	}
 }
 function clearall(){
-	for(var i = 0; i <= Number(localStorage.getItem("gamecounter")); i++){
-		var game = "game" + String(i);
-		if(game != null)
-			localStorage.removeItem(game);
-		else
-			break;
+	for (var i = 0; i < 10; i++){
+		localStorage.setItem("counter" + String(i), 0);
+		localStorage.removeItem("gc" + String(i));
+		localStorage.removeItem("game" + String(i));
 	}
-	for(var i = 0; i <= Number(localStorage.getItem("counter")); i++){
-		var gccomment = "GC" + String(i);
-		if(gccomment != null)
-			localStorage.removeItem(gccomment );
-		else
-			break;
-	}
-	localStorage.setItem("gamecounter", 0);
-	localStorage.setItem("counter", 0);
 	window.location.reload();
 }
