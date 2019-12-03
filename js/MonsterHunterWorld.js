@@ -91,16 +91,17 @@ function Mouseoutevent(id){
 
 
 function Like(){
-	function Gameinfo(chname, enname, score, platform){
+	function Gameinfo(chname, enname, score, platform, pagename){
 		this.chname = chname;
 		this.enname = enname;
 		this.score = score;
 		this.platform = platform;
+		this.pagename = pagename;
 	}
 	//localStorage["gamecounter"] = 0;
 	
 	var game = "game" + localStorage.getItem("gamecounter");
-	var gameinfo = new Gameinfo("怪物猎人 世界", "Monster Hunter World", "9.5", "PS4,PC");
+	var gameinfo = new Gameinfo("怪物猎人 世界", "Monster Hunter World", "9.5", "PS4,PC", "MonsterHunterWorld");
 	strgameinfo = JSON.stringify(gameinfo);
 	localStorage[game] = strgameinfo;
 	localStorage["gamecounter"] = Number(localStorage.getItem("gamecounter")) + 1;

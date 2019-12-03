@@ -89,7 +89,8 @@ function likesadd(){
 			d4.append(gameinfo.platform);
 			imgpath = "../images/LittlePic/" + gameinfo.enname + ".png";
 			img.src = imgpath;
-			a.href="";
+			pagepath = "../Mainpage/" + gameinfo.pagename + ".html";
+			a.href = pagepath;
 			D.append(d1);
 			D.append(d2);
 			D.append(d3);
@@ -134,6 +135,7 @@ function commentadd(){
 	}
 }
 function clearall(){
+	localStorage["gamecounter"] = 0;
 	for (var i = 0; i < 10; i++){
 		localStorage.setItem("counter" + String(i), 0);
 		localStorage.removeItem("gc" + String(i));

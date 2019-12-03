@@ -32,6 +32,10 @@ body{
 	left: 340px;
 	width: 210px;
 	height: 100px;
+	padding: 3px 4px 0px 4px;
+	background-color: #a3a7a7;
+	box-shadow: 0px 0px 3px grey;
+	border-radius: 8px;
 	visibility: hidden;
 }
 #GICintro.gicshow {
