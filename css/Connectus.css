@@ -3,6 +3,11 @@
 	margin: 0px;
 	padding: 0px;
 }
+a{
+	text-decoration: none;
+	color: black;
+	outline: none;
+}
 body{
 	width: 1450px;
 	background: url("../images/BGP/02.jpg") fixed no-repeat;
@@ -29,7 +34,6 @@ body{
 	color: #aaa;
 }
 #Connect{
-	
 	letter-spacing: 1px;
 	background-color: transparent; 
 	margin-top: 10px;

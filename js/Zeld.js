@@ -1,14 +1,16 @@
-function loadcomment(){
-	var str = localStorage.getItem("gc0");
-	var gc0 = JSON.parse(str);
-	for(var i = 0; i < Number(localStorage.getItem("counter0")); i++)	{
-		if(gc0[i] != null){
+function loadcomment(num){
+	var gcnum = "gc" + String(num);
+	var countnum = "counter" + String(num);
+	var str = localStorage.getItem(gcnum);
+	var gc = JSON.parse(str);
+	for(var i = 0; i < Number(localStorage.getItem(countnum)); i++)	{
+		if(gc[i] != null){
 			var ctag = document.getElementsByClassName("Comment")[0];
 			var addc = document.createElement("div");
-			var node = document.createTextNode(gc0[i].comment);
+			var node = document.createTextNode(gc[i].comment);
 			addc.append(node);
 			var commentdate = document.createElement("span");
-			commentdate.append(gc0[i].date);
+			commentdate.append(gc[i].date);
 			addc.append(commentdate);
 			ctag.append(addc);
 		}else{
@@ -20,20 +22,14 @@ function openNav() {
 	var value = document.getElementById("mySidenav").style.width; 	
 	if(value == "220px"){
 		document.getElementById("mySidenav").style.width = "0";
-		close();
+		document.getElementById("MenuBtn").style.margin = "0px auto auto 0px";
+		document.getElementById("GamePart").style.margin = "10px auto auto 100px";
+		
 	}else{
 		document.getElementById("mySidenav").style.width = "220px";
-		open();
+		document.getElementById("MenuBtn").style.margin = "0px auto auto 220px";
+		document.getElementById("GamePart").style.margin = "10px auto auto 340px";
 	}
-}
-//Change the location of the menu button and the middle part of the page 
-function open(){
-	document.getElementById("MenuBtn").style.margin = "0px auto auto 220px";
-	document.getElementById("GamePart").style.margin = "10px auto auto 340px";
-}
-function close(){
-	document.getElementById("MenuBtn").style.margin = "0px auto auto 0px";
-	document.getElementById("GamePart").style.margin = "10px auto auto 100px";
 }
 //Open and close the hidden part of the platform selective list part
 function Pf(){
@@ -54,12 +50,12 @@ function Cp(){
 	}
 
 }
-var picnum = new Array();
-picnum[1] = "../Mainpage/Gimgs/Zeld/01.jpg";
-picnum[2] = "../Mainpage/Gimgs/Zeld/02.jpg";
-picnum[3] = "../Mainpage/Gimgs/Zeld/03.jpg";
-picnum[4] = "../Mainpage/Gimgs/Zeld/04.jpg";
-function PicChange(id){
+function PicChange(id, gamename){
+	var picnum = new Array();
+	picnum[1] = "../Mainpage/Gimgs/" + gamename + "/01.jpg";
+	picnum[2] = "../Mainpage/Gimgs/" + gamename + "/02.jpg";
+	picnum[3] = "../Mainpage/Gimgs/" + gamename + "/03.jpg";
+	picnum[4] = "../Mainpage/Gimgs/" + gamename + "/04.jpg";
 	document.getElementById("Pic").src = picnum[id];
 	var ID = "CP" + id;
 	document.getElementById(ID).style.opacity = "1";
@@ -74,19 +70,7 @@ function PicChange(id){
 		}
 	}
 }
-function Mouseonevent(id){
-	var ID = "CP" + id;
-	document.getElementById(ID).style.border = "2px solid black";
-	document.getElementById(ID).style.opacity = "1";
-}
-function Mouseoutevent(id){
-	var ID = "CP" + id;
-	document.getElementById(ID).style.border = "2px solid rgba(25, 25, 25, 0.1)";
-	document.getElementById(ID).style.opacity = "0.6";
-}
-
-
-function Like(){
+function Like(chname, enname, score, platform, pagename){
 	function Gameinfo(chname, enname, score, platform,pagename){
 		this.chname = chname;
 		this.enname = enname;
@@ -97,33 +81,38 @@ function Like(){
 	//localStorage["gamecounter"] = 0;
 	
 	var game = "game" + localStorage.getItem("gamecounter");
-	var gameinfo = new Gameinfo("旷野之息", "Breathe of Wild", "10.0", "NS,WiiU","Zeld");
+	//var gameinfo = new Gameinfo("旷野之息", "Breathe of Wild", "10.0", "NS,WiiU","Zeld");
+	var gameinfo = new Gameinfo(chname, enname, score, platform, pagename);
 	strgameinfo = JSON.stringify(gameinfo);
 	localStorage[game] = strgameinfo;
 	localStorage["gamecounter"] = Number(localStorage.getItem("gamecounter")) + 1;
 	alert("Already add to my favourite list");
 }
-
 function Hate(){
 	alert("哦O.O");
 }
-function obj(comment, date, game){
-	this.comment = comment;
-	this.date = date;
-	this.game = game;
-}
-function AddComment(){
+function AddComment(num, gamename){
+	function obj(comment, date, game){
+		this.comment = comment;
+		this.date = date;
+		this.game = game;
+	}
 	var comment =document.querySelector("#commentarea").value;
 	if(comment == ""){
 		alert("Comment can not be empty!");
 	}else{
-		var isexist = localStorage.getItem("gc0");
+		//var isexist = localStorage.getItem("gc0");
+		var gcnum = "gc" + String(num);
+		var counternum = "counter" + num;
+		var isexist = localStorage.getItem(gcnum);
 		if(isexist == null){
-			var gc0 = new Array();
+			//var gc0 = new Array();
+			var gc = new Array();
 		}else{
-			var gc0 = JSON.parse(isexist);
+			//var gc0 = JSON.parse(isexist);
+			var gc = JSON.parse(isexist);
 		}
-		var i = Number(localStorage.getItem("counter0"));
+		var i = Number(localStorage.getItem(counternum));
 		var time = new Date();
 		var date = "on " + time.getFullYear() + "/" + time.getMonth() + "/" +time.getDate() + " " + time.getHours() + ":" + time.getMinutes();
 		var ctag = document.getElementsByClassName("Comment")[0];
@@ -134,9 +123,9 @@ function AddComment(){
 		commentdate.append(date);
 		addc.append(commentdate);
 		ctag.append(addc);
-		gc0[i] = new obj(comment, date, "Breathe of Wild");
-		localStorage["gc0"] = JSON.stringify(gc0);
-		localStorage["counter0"] = Number(localStorage.getItem("counter0")) + 1;
+		gc[i] = new obj(comment, date, gamename);
+		localStorage[gcnum] = JSON.stringify(gc);
+		localStorage[counternum] = Number(localStorage.getItem(counternum)) + 1;
 		document.querySelector("#commentarea").value = "";
 	}
 }

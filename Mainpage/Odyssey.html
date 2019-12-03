@@ -4,44 +4,44 @@
 	<meta charset="UTF-8">
 	<title>Mario: Odyssey</title>
 	<link rel="stylesheet" href="../css/Zeld.css" type="text/css">
-	<script src="../js/Odyssey.js"></script>
+	<script src="../js/Zeld.js"></script>
 	<style>
 #CP1{
-	background: url("../Mainpage/Gimgs/Odyeesy/01.jpg") no-repeat;
+	background: url("../Mainpage/Gimgs/Odyssey/01.jpg") no-repeat;
 	background-size: 100px auto;
 }
 #CP2{
-	background: url("../Mainpage/Gimgs/Odyeesy/02.jpg") no-repeat;
+	background: url("../Mainpage/Gimgs/Odyssey/02.jpg") no-repeat;
 	background-size: 100px auto;
 }
 #CP3{
-	background: url("../Mainpage/Gimgs/Odyeesy/03.jpg") no-repeat;
+	background: url("../Mainpage/Gimgs/Odyssey/03.jpg") no-repeat;
 	background-size: 100px auto;
 }
 #CP4{
-	background: url("../Mainpage/Gimgs/Odyeesy/04.jpg") no-repeat;
+	background: url("../Mainpage/Gimgs/Odyssey/04.jpg") no-repeat;
 	background-size: 100px auto;
 }
 	</style>
 </head>
-<body onload="loadcomment()">
+<body onload="loadcomment(1)">
 		<!--SideBar part -->
 		<div id="mySidenav" class="sidenav">
 			<a href="./SelfPage.html">DreamLocker</a>
 			<br>
 			<span class="plco" onclick="Pf()">Platform</span>
 			<div id="PfBar" style="height: 160px;">
-				<a href="../SwitchGL.html">Switch</a>
-				<a href="../PS4GL.html">PS4</a>
-				<a href="../XBOXGL.html">Xbox</a>
-				<a href="../OtherPlatformsGL.html">Others</a>
+				<a href="./SwitchGL.html">Switch</a>
+				<a href="./PS4GL.html">PS4</a>
+				<a href="./XBOXGL.html">Xbox</a>
+				<a href="./OtherPlatformsGL.html">Others</a>
 			</div>
 			<span class="plco" onclick="Cp()">Company</span>
 			<div id="CpBar" style="height: 160px;">
-				<a href="../NintendoGL.html">Nintendo</a>
-				<a href="../PS4GL.html">Sony</a>
-				<a href="../MicrosoftGL.html">Microsoft</a>
-				<a href="../OtherCompanyGL.html">Others</a>
+				<a href="./NintendoGL.html">Nintendo</a>
+				<a href="./PS4GL.html">Sony</a>
+				<a href="./MicrosoftGL.html">Microsoft</a>
+				<a href="./OtherCompanyGL.html">Others</a>
 			</div>
 			<div class="cu"><a href="">Connect us</a></div>
 			<div class="do"><a href="">Donate</a></div>
@@ -49,16 +49,16 @@
 		<div style="font-size: 20px; font-weight: bold; margin-left: 350px; margin-top: 40px; position: absolute;">超级马里奥：奥德赛</div>
 		<div style="font-size: 20px; margin-left: 350px; margin-top: 74px; position: absolute;">Super Mario: Odyeesy</div>
 		<div class="PicChanging">
-			<div class="PicShowPart"><img id="Pic" src="./Gimgs/Odyeesy/01.jpg" width="600px"></div>
+			<div class="PicShowPart"><img id="Pic" src="./Gimgs/Odyssey/01.jpg" width="600px"></div>
 			<div class="ControlPart">
-				<div class="CP" id="CP1" onclick="PicChange(1)" ></div>
-				<div class="CP" id="CP2" onclick="PicChange(2)" ></div>
-				<div class="CP" id="CP3" onclick="PicChange(3)" ></div>
-				<div class="CP" id="CP4" onclick="PicChange(4)" ></div>
+				<div class="CP" id="CP1" onclick="PicChange(1, 'Odyssey')" ></div>
+				<div class="CP" id="CP2" onclick="PicChange(2, 'Odyssey')" ></div>
+				<div class="CP" id="CP3" onclick="PicChange(3, 'Odyssey')" ></div>
+				<div class="CP" id="CP4" onclick="PicChange(4, 'Odyssey')" ></div>
 			</div>
 		</div>
 		<div class="GameInfor">
-			<div class="BriefPic"><img src="Gimgs/Odyeesy/BriefPic.jpg" width="300px"></div>
+			<div class="BriefPic"><img src="Gimgs/Odyssey/BriefPic.jpg" width="300px"></div>
 			<div class="BriefInfor">
 				<div style="font-size: 30px; font-weight: bolder;">9.6</div>
 				<div>
@@ -77,7 +77,7 @@
 				</div>
 			</div>
 			<div>
-				<div class="Btn" id="LikeBtn" onclick="Like()">Like it</div>
+				<div class="Btn" id="LikeBtn" onclick="Like('马里奥：奥德赛', 'Mario: Odyssey', '9.6', 'NS', 'Odyssey')">Like it</div>
 				<div class="Btn" id="HateBtn" onclick="Hate()">Hate it</div>
 			</div>
 			<div>
@@ -109,7 +109,7 @@
 					</div>
 				</div>
 				<textarea name="" id="commentarea" cols="37" rows="5" placeholder="Say something"></textarea>
-				<button class="addCoBtn" onclick="AddComment()">add comments</button>
+				<button class="addCoBtn" onclick="AddComment(1, 'Mario: Odyssey')">add comments</button>
 			</div>
 		</div>
 		<div class="GameTextIntro">
