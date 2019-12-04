@@ -48,7 +48,6 @@ function Cp(){
 	}else{
 		document.getElementById("CpBar").style.height = "0px";
 	}
-
 }
 function PicChange(id, gamename){
 	var picnum = new Array();

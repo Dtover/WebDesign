@@ -1,0 +1,162 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+.image{
+	margin-top: 3%;
+	transition:all 0.3s ease-in-out;
+	display: inline;
+}
+.image:hover{
+	/*margin-top: 0px;
+	height: 100%; */
+	box-shadow: 0px 0px 8px black;	
+}
+#PicContent{
+	margin: 0px;
+}
+a{
+	text-decoration: none;
+	color: black;
+	outline: none;
+	transition: 0.2s;
+}
+a:hover{
+	color: grey;
+}
+body{
+	z-index: -1;
+	width: 1450px;
+}
+body::-webkit-scrollbar{ /*general setting*/
+	width: 10px;		
+	height: 1px;
+}
+body::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+	border-radius: 8px;
+	-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+	box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+	background: rgb(192, 199, 210);
+	transition: 0.3s;
+	}
+body::-webkit-scrollbar-track {/*滚动条里面轨道*/
+	box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+	-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+	border-radius: 8px;
+	background: #EDEDED;
+	}
+body::-webkit-scrollbar-thumb:hover{
+	background: #9f9f9f;
+}
+.sidenav{
+	height: 100%;
+	width: 218px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgba(25, 25, 25, 0.8);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+.sidenav a{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+.plco{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #909090;
+}
+.plco:hover{
+	cursor: pointer;
+	color: #f1f1f1;
+}		
+.cu a, .do a{
+	font-size: 20px !important;
+	padding-bottom: 5px !important;
+	width: 150px;
+	color: #909090;
+	transition: 0.3s;
+	padding-top: 0px;
+}
+.ga a{
+	color: white;
+}
+#PfBar a, #CpBar a{
+	font-size: 20px;
+	color: #606060;
+}
+.sidenav a:hover, .offcanvas a:hover{
+	color: #f1f1f1;
+}
+#PfBar{
+	width: 250px;
+	height: 160px;
+	margin-left: 20px;
+	margin-top: 5px;
+	overflow-x: hidden;
+	transition: 0.4s;
+}
+#CpBar{
+	width: 250px;
+	height: 160px;
+	margin-top: 5px;
+	margin-left: 20px;
+	overflow-x: hidden;
+	transition: 0.4s;
+}
+#PfBar a:hover, #CpBar a:hover{
+	color: #f1f1f1;
+}
+#Background{
+	background-size: cover;
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0); 
+	z-index: 1; 
+	left: 0px; 
+	top: 0px; 
+	display: none;
+}
+#Background.show{
+	visibility: visible;
+	animation: fadein 0.8s;
+	-webkit-animation: fadein 0.8s;
+}
+@keyframes fadein {
+	from { top: -1000px; opacity: 0; }	
+	to { top: 0px; opacity: 1; }
+}
+@-webkit-keyframes fadein {
+	from { top: -1000px; opacity: 0; }	
+	to { top: 0px; opacity: 1; }
+}
+#Background.dis{
+	visibility: visible;
+	animation: fadeout 0.8s;
+	-webkit-animation: fadeout 0.8s;
+}
+@keyframes fadeout {
+	from { top: 0px; opacity: 1; }	
+	to { top: 1000px; opacity: 0; }
+}
+@-webkit-keyframes fadeout {
+	from { top: 0px; opacity: 1; }	
+	to { top: 1000px; opacity: 0; }
+}
+#PicWindow{
+	width: 1200px; 
+	height: 675px;
+	margin: 55px auto;
+}

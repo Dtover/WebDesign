@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gallery</title>
+	<link rel="stylesheet" href="../css/Gallery.css">
+	<script src="../js/Gallery.js"></script>
+	<!--<script src="http://lab.mkblog.cn/high/happy.js"></script> -->
+</head>
+<body>
+	<!--SideBar part -->
+	<div id="mySidenav" class="sidenav">
+		<a href="./SelfPage.html">DreamLocker</a>
+		<br>
+		<span class="plco" onclick="Pf()">Platform</span>
+		<div id="PfBar" style="height: 160px;">
+			<a href="./SwitchGL.html">Switch</a>
+			<a href="./PS4GL.html">PS4</a>
+			<a href="./XBOXGL.html">Xbox</a>
+			<a href="./OtherPlatformsGL.html">Others</a>
+		</div>
+		<span class="plco" onclick="Cp()">Company</span>
+		<div id="CpBar" style="height: 160px;">
+			<a href="./NintendoGL.html">Nintendo</a>
+			<a href="./PS4GL.html">Sony</a>
+			<a href="./MicrosoftGL.html">Microsoft</a>
+			<a href="./OtherCompanyGL.html">Others</a>
+		</div>
+		<div class="ga"><a href="#">Gallery</a></div>
+		<div class="cu"><a href="#">Connect us</a></div>
+		<div class="do"><a href="">Donate</a></div>
+	</div>
+	<div id="Background" onclick="cls()">
+		<div id="PicWindow">
+			<img id="PicContent" src="" width="100%">
+		</div>
+	</div>
+	<div style="z-index:1; background-color: transparent; float: right;margin-right: -15px; width: 86%; height: 2850px;">
+		<div class="ott">
+			<div style="float: left; width: 50%; height: 350px; text-align: center;">
+				<img class="image" src="../images/Gallery/01.jpg" height="90%" onclick="EnlargePic(0)">
+			</div>
+			<div style="float: right; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/02.jpg" height="90%" onclick="EnlargePic(1)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/03.jpg" height="90%" onclick="EnlargePic(2)">
+				</div>
+			</div>
+			<div style="float: right; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/04.jpg" height="90%" onclick="EnlargePic(3)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/05.jpg" height="90%" onclick="EnlargePic(4)">
+				</div>
+			</div>
+		</div>
+		<div class="tto">
+			<div style="float: left; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/06.jpg" height="90%" onclick="EnlargePic(5)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/07.jpg" height="90%" onclick="EnlargePic(6)">
+				</div>
+			</div>
+			<div style="float: left; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/08.jpg" height="90%" onclick="EnlargePic(7)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/09.jpg" height="90%" onclick="EnlargePic(8)">
+				</div>
+			</div>
+			<div style="float: right; width: 50%; height: 350px; text-align: center;">
+				<img class="image" src="../images/Gallery/10.jpg" height="90%" onclick="EnlargePic(9)">
+			</div>
+		</div>
+		<div class="tot">
+			<div style="float: left; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/11.jpg" height="90%" onclick="EnlargePic(10)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/12.jpg" height="90%" onclick="EnlargePic(11)">
+				</div>
+			</div>
+			<div style="float: left; width: 50%; height: 350px; text-align: center;">
+				<img class="image" src="../images/Gallery/13.jpg" height="90%" onclick="EnlargePic(12)">
+			</div>
+			<div style="float: right; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/14.jpg" height="90%" onclick="EnlargePic(13)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/15.jpg" height="90%" onclick="EnlargePic(14)">
+				</div>
+			</div>
+		</div>
+		<div class="ott">
+			<div style="float: left; width: 50%; height: 350px; text-align: center;">
+				<img class="image" src="../images/Gallery/16.jpg" height="90%" onclick="EnlargePic(15)">
+			</div>
+			<div style="float: right; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/17.jpeg" height="90%" onclick="EnlargePic(16)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/18.jpg" height="90%" onclick="EnlargePic(17)">
+				</div>
+			</div>
+			<div style="float: right; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/19.jpg" height="90%" onclick="EnlargePic(18)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/20.jpg" height="90%" onclick="EnlargePic(19)">
+				</div>
+			</div>
+		</div>
+		<div class="tot">
+			<div style="float: left; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/21.jpg" height="90%" onclick="EnlargePic(20)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/22.jpg" height="90%" onclick="EnlargePic(21)">
+				</div>
+			</div>
+			<div style="float: left; width: 50%; height: 350px; text-align: center;">
+				<img class="image" src="../images/Gallery/23.jpg" height="90%" onclick="EnlargePic(22)">
+			</div>
+			<div style="float: right; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/24.jpg" height="90%" onclick="EnlargePic(23)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/25.jpg" height="90%" onclick="EnlargePic(24)">
+				</div>
+			</div>
+		</div>
+		<div class="tto">
+			<div style="float: left; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/26.jpg" height="90%" onclick="EnlargePic(25)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/27.jpg" height="90%" onclick="EnlargePic(26)">
+				</div>
+			</div>
+			<div style="float: left; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/28.jpg" height="90%" onclick="EnlargePic(27)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/29.jpg" height="90%" onclick="EnlargePic(28)">
+				</div>
+			</div>
+			<div style="float: right; width: 50%; height: 350px; text-align: center;">
+				<img class="image" src="../images/Gallery/30.jpg" height="90%" onclick="EnlargePic(29)">
+			</div>
+		</div>
+		<div class="tot">
+			<div style="float: left; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/31.jpg" height="90%" onclick="EnlargePic(30)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/32.jpg" height="90%" onclick="EnlargePic(31)">
+				</div>
+			</div>
+			<div style="float: left; width: 50%; height: 350px; text-align: center;">
+				<img class="image" src="../images/Gallery/33.jpg" height="90%" onclick="EnlargePic(32)">
+			</div>
+			<div style="float: right; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/34.jpg" height="90%" onclick="EnlargePic(33)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/35.jpg" height="90%" onclick="EnlargePic(34)">
+				</div>
+			</div>
+		</div>
+		<div class="tto">
+			<div style="float: left; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/36.jpg" height="90%" onclick="EnlargePic(35)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/37.jpg" height="90%" onclick="EnlargePic(36)">
+				</div>
+			</div>
+			<div style="float: left; width: 25%;height: 350px;">
+				<div style="float: left; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/38.jpg" height="90%" onclick="EnlargePic(37)">
+				</div>
+				<div style="float: right; width: 100%; height: 50%; text-align: center;">
+					<img class="image" src="../images/Gallery/39.jpg" height="90%" onclick="EnlargePic(38)">
+				</div>
+			</div>
+			<div style="float: right; width: 50%; height: 350px; text-align: center;">
+				<img class="image" src="../images/Gallery/40.jpg" height="90%" onclick="EnlargePic(39)">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
