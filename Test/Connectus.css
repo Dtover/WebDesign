@@ -89,3 +89,70 @@ body{
 	filter: blur(5px);
 	-webkit-filter: blur(5px);
 }
+.sidenav{
+	height: 100%;
+	width: 218px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgba(25, 25, 25, 0.8);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+.sidenav a{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+.plco{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #909090;
+}
+.plco:hover{
+	cursor: pointer;
+	color: #f1f1f1;
+}		
+.cu a, .do a{
+	font-size: 20px !important;
+	padding-bottom: 5px !important;
+	width: 150px;
+	color: #909090;
+	transition: 0.3s;
+	padding-top: 0px;
+}
+.ga a{
+	color: white;
+}
+#PfBar a, #CpBar a{
+	font-size: 20px;
+	color: #606060;
+}
+.sidenav a:hover, .offcanvas a:hover{
+	color: #f1f1f1;
+}
+#PfBar{
+	width: 250px;
+	height: 160px;
+	margin-left: 20px;
+	margin-top: 5px;
+	overflow-x: hidden;
+	transition: 0.4s;
+}
+#CpBar{
+	width: 250px;
+	height: 160px;
+	margin-top: 5px;
+	margin-left: 20px;
+	overflow-x: hidden;
+	transition: 0.4s;
+}
+#PfBar a:hover, #CpBar a:hover{
+	color: #f1f1f1;
+}

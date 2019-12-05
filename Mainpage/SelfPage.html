@@ -5,11 +5,12 @@
 	<title>SelfPage</title>
 	<link rel="stylesheet" href="../css/SelfPage.css" type="text/css">
 	<script src="../js/SelfPage.js"></script>
+	<script src="../js/SideNav.js"></script>
 </head>
 <body onload="commentadd()">
 		<!--SideBar part -->
 		<div id="mySidenav" class="sidenav">
-			<a href="SelfPage.html">DreamLocker</a>
+			<a id="Username" href="./SelfPage.html"></a>
 			<br>
 			<span class="plco" onclick="Pf()">Platform</span>
 			<div id="PfBar" style="height: 160px;">
@@ -20,11 +21,13 @@
 			</div>
 			<span class="plco" onclick="Cp()">Company</span>
 			<div id="CpBar" style="height: 160px;">
-				<a href="./NintendoGL.html">Nintendo</a>
-				<a href="./PS4GL.html">Sony</a>
-				<a href="./MicrosoftGL.html">Microsoft</a>
-				<a href="./OtherCompanyGL.html">Others</a>
+				<a href="#">Nintendo</a>
+				<a href="#">Sony</a>
+				<a href="#">Microsoft</a>
+				<a href="#">Others</a>
 			</div>
+			<div class="ga"><a href="./Gallery.html">Gallery</a></div>
+			<div class="cu"><a href="./Connectus.html">Connect us</a></div>
 			<div>
 				<button onclick="clearall()">clearall</button>
 			</div>
@@ -34,7 +37,7 @@
 			<img class="profile" src="../images/logo.png">
 		</div>
 		<div class="SelfInfor">
-			<div class="Username">DreamLocker</div>	
+			<div id="User"></div>	
 			<div class="Word">Nintendo rules the world!!!</div>	
 		</div>
 		<div class="LC">

@@ -2,63 +2,64 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>GameList</title>
+	<title>Xbox Game list</title>
 	<link rel="stylesheet" href="../css/GameList.css" type="text/css">
 	<script src="../js/GameList.js"></script>
+	<script src="../js/SideNav.js"></script>
 </head>
-	<body style="width: 1450px;">
+	<body style="width: 1450px;" onload="getUsername()">
 		<!--SideBar part -->
 		<div id="mySidenav" class="sidenav">
-			<a href="./SelfPage.html">DreamLocker</a>
+			<a id="Username" href="./SelfPage.html"></a>
 			<br>
 			<span class="plco" onclick="Pf()">Platform</span>
 			<div id="PfBar" style="height: 0px;">
 				<a href="./SwitchGL.html">Switch</a>
 				<a href="./PS4GL.html">PS4</a>
 				<a href="./XBOXGL.html">Xbox</a>
-				<a href="./OtherPlatformsGL.html">Others</a>
+				<a href="#">Others</a>
 			</div>
 			<span class="plco" onclick="Cp()">Company</span>
 			<div id="CpBar" style="height: 0px;">
-				<a href="./NintendoGL.html">Nintendo</a>
-				<a href="./PS4GL.html">Sony</a>
-				<a href="./MicrosoftGL.html">Microsoft</a>
-				<a href="./OtherCompanyGL.html">Others</a>
+				<a href="#">Nintendo</a>
+				<a href="#">Sony</a>
+				<a href="#">Microsoft</a>
+				<a href="#">Others</a>
 			</div>
+			<div class="ga"><a href="./Gallery.html">Gallery</a></div>
 			<div class="cu"><a href="./Connectus.html">Connect us</a></div>
-			<div class="do"><a href="">Donate</a></div>
 		</div>
 		<span id="MenuBtn" onclick="openNav()">&#9776;Menu</span>
 		<!--GameList Part-->
 		<div id="GamePart">
 			<div id="Game01" class="Game">
 				<div class="GameCover">
-					<img src="../images/LittlePic/Breathe of Wild.png" width="130px">
+					<img src="../images/LittlePic/Forza Horizon 4.png" width="130px">
 				</div>				
 				<div class="GameInfo">
 					<div>
 						<span class="GameNameZh">
-						<a href="./Zeld.html">塞尔达传说：旷野之息</a>
+						<a href="./ForzaHorizon4.html">极限竞速 地平线4</a>
 						</span>
 					</div>
 					<div>
-						<span class="GameNameEn">The Legend of Zeld:Breathe of Wild</span>
+						<span class="GameNameEn">Forza Horizon 4</span>
 					</div>
 					<div>
 						<span class="Company">发行商：</span><span class="CompanyValue">
-						<a href="./NintendoGL.html">Nintendo</a></span>
+						<a href="./XBOXGL.html">Microsoft</a></span>
 					</div>
 					<div>
 						<span class="Platform">游戏平台：</span>
 						<span class="PlatformValue">
-							<a href="">Switch</a>
+							<a href="./XBOXGL.html">XBOX</a>
 						</span>
 						<span class="PlatformValue2">
-							<a href="">WiilU</a>
+							<a href="#">PC</a>
 						</span>
 					</div>
 					<div class="GameIntroduction">
-						《旷野之息》将像它的那些前辈一样，成为了电子游戏发展史的又一个里程碑。它会为未来数年甚至十几年的游戏开发者带去无数的灵感，会被下一代的很多游戏“致敬”。
+						最好的赛车游戏，最美的四季英伦。
 					</div>
 				</div>
 			</div>
@@ -92,29 +93,32 @@
 			</div>
 			<div id="Game03" class="Game">
 				<div class="GameCover">
-					<img src="../images/LittlePic/Persona 5.png" width="130px">
+					<img src="../images/LittlePic/Hollow Knight.png" width="130px">
 				</div>				
 				<div class="GameInfo">
 					<div>
 						<span class="GameNameZh">
-						<a href="">女神异闻录5</a>
+						<a href="./HollowKnight.html">空洞骑士</a>
 						</span>
 					</div>
 					<div>
-						<span class="GameNameEn">Persona 5</span>
+						<span class="GameNameEn">Hollow Knight</span>
 					</div>
 					<div>
 						<span class="Company">发行商：</span><span class="CompanyValue">
-						<a href="./NintendoGL.html">Atlus</a></span>
+						<a href="#">Team Cherry</a></span>
 					</div>
 					<div>
 						<span class="Platform">游戏平台：</span>
 						<span class="PlatformValue">
-							<a href="">PS4</a>
+							<a href="./XBOXGL.html">XBOX</a>
+						</span>
+						<span class="PlatformValue2">
+							<a href="./SwitchGL.html">Switch</a>
 						</span>
 					</div>
 					<div class="GameIntroduction">
-						&nbsp;&nbsp;《女神异闻录5》是一款很难找出缺点的游戏，它为玩家的每一个选择都准备了华丽、有趣的体验。
+						如果你喜欢经典的游戏模式、可爱却又颇具攻击性的角色、史诗般的冒险和美丽的哥特式世界，《空洞骑士》绝对是你不可错过的选择
 					</div>
 				</div>
 			</div>
@@ -125,7 +129,7 @@
 				<div class="GameInfo">
 					<div>
 						<span class="GameNameZh">
-						<a href="">塞尔达传说：旷野之息</a>
+						<a href="./Zeld.html">塞尔达传说：旷野之息</a>
 						</span>
 					</div>
 					<div>
@@ -138,10 +142,10 @@
 					<div>
 						<span class="Platform">游戏平台：</span>
 						<span class="PlatformValue">
-							<a href="">Switch</a>
+							<a href="./SwitchGL.html">Switch</a>
 						</span>
 						<span class="PlatformValue2">
-							<a href="">WiilU</a>
+							<a href="#">WiilU</a>
 						</span>
 					</div>
 					<div class="GameIntroduction">
@@ -151,63 +155,60 @@
 			</div>
 			<div id="Game05" class="Game">
 				<div class="GameCover">
-					<img src="../images/001LegendofZeld.png" width="130px">
+					<img src="../images/LittlePic/Persona 5.png" width="130px">
 				</div>				
 				<div class="GameInfo">
 					<div>
 						<span class="GameNameZh">
-						<a href="">塞尔达传说：旷野之息</a>
+						<a href="./Persiona5.html">女神异闻录5</a>
 						</span>
 					</div>
 					<div>
-						<span class="GameNameEn">The Legend of Zeld:Breathe of Wild</span>
+						<span class="GameNameEn">Persona 5</span>
 					</div>
 					<div>
 						<span class="Company">发行商：</span><span class="CompanyValue">
-						<a href="./NintendoGL.html">Nintendo</a></span>
+						<a href="#">Atlus</a></span>
 					</div>
 					<div>
 						<span class="Platform">游戏平台：</span>
 						<span class="PlatformValue">
-							<a href="">Switch</a>
-						</span>
-						<span class="PlatformValue2">
-							<a href="">WiilU</a>
+							<a href="./PS4GL.html">PS4</a>
 						</span>
 					</div>
 					<div class="GameIntroduction">
-						《旷野之息》将像它的那些前辈一样，成为了电子游戏发展史的又一个里程碑。它会为未来数年甚至十几年的游戏开发者带去无数的灵感，会被下一代的很多游戏“致敬”。
+						《女神异闻录5》是一款很难找出缺点的游戏，它为玩家的每一个选择都准备了华丽、有趣的体验。
 					</div>
 				</div>
 			</div>
 			<div id="Game06" class="Game">
 				<div class="GameCover">
-					<img src="../images/001LegendofZeld.png" width="130px">
+					<img src="../images/LittlePic/SEKIRO.png" width="130px">
 				</div>				
 				<div class="GameInfo">
 					<div>
 						<span class="GameNameZh">
-						<a href="">塞尔达传说：旷野之息</a>
+						<a href="./SEKIRO.html">只狼：影逝二度</a>
 						</span>
 					</div>
 					<div>
-						<span class="GameNameEn">The Legend of Zeld:Breathe of Wild</span>
+						<span class="GameNameEn">SEKIRO: SHADOW DIE TWICE</span>
 					</div>
 					<div>
 						<span class="Company">发行商：</span><span class="CompanyValue">
-						<a href="./NintendoGL.html">Nintendo</a></span>
+						<a href="#">FromSoftware</a></span>
 					</div>
 					<div>
 						<span class="Platform">游戏平台：</span>
 						<span class="PlatformValue">
-							<a href="">Switch</a>
+							<a href="./XBOXGL.html">XBOX</a>
 						</span>
 						<span class="PlatformValue2">
-							<a href="">WiilU</a>
+							<a href="./XBOXGL.html">PS4</a>
 						</span>
 					</div>
 					<div class="GameIntroduction">
-						《旷野之息》将像它的那些前辈一样，成为了电子游戏发展史的又一个里程碑。它会为未来数年甚至十几年的游戏开发者带去无数的灵感，会被下一代的很多游戏“致敬”。
+						天诛+老贼，再度点燃受苦之魂。
 					</div>
 				</div>
 			</div>
@@ -218,7 +219,7 @@
 				<ul style="list-style: none;">
 					<span style="font-size: 20px; color: #F5E871;">Best score(IGN)</span>
 					<li>
-						<a class="rlbs" id="rlbs01" href="./GameInfors/Zeld.html" onmouseover="RLlittleInforOpen(1)" onmouseout="RLlittleInforClose(1)">1. 旷野之息
+						<a class="rlbs" id="rlbs01" href="./Zeld.html" onmouseover="RLlittleInforOpen(1)" onmouseout="RLlittleInforClose(1)">1. 旷野之息
 							<div class="RLBS" id="RLBS01">
 								<img style="float: left;" src="../images/LittlePic/Breathe of Wild.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px;"><br>&nbsp;&nbsp;&nbsp;Legend of Zeld<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 10.0</span>
@@ -226,7 +227,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs02" href="" onmouseover="RLlittleInforOpen(2)" onmouseout="RLlittleInforClose(2)">2. 超级马里奥：奥德赛
+						<a class="rlbs" id="rlbs02" href="./Odyssey.html" onmouseover="RLlittleInforOpen(2)" onmouseout="RLlittleInforClose(2)">2. 超级马里奥：奥德赛
 							<div class="RLBS" id="RLBS02">
 								<img style="float: left;" src="../images/LittlePic/Mario: Odyssey.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px; line-height: 28px;">&nbsp;&nbsp;&nbsp;Super Mario:<br>&nbsp;&nbsp; Odyssey<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.6</span>
@@ -234,7 +235,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs03" href="" onmouseover="RLlittleInforOpen(3)" onmouseout="RLlittleInforClose(3)">3. 极限竞速:地平线4
+						<a class="rlbs" id="rlbs03" href="./ForzaHorizon4.html" onmouseover="RLlittleInforOpen(3)" onmouseout="RLlittleInforClose(3)">3. 极限竞速:地平线4
 							<div class="RLBS" id="RLBS03">
 								<img style="float: left;" src="../images/LittlePic/Forza Horizon 4.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px;"><br>&nbsp;&nbsp;&nbsp;Forza Horizon4: <br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.6</span>
@@ -242,7 +243,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs04" href="" onmouseover="RLlittleInforOpen(4)" onmouseout="RLlittleInforClose(4)">4. 只狼：影逝二度
+						<a class="rlbs" id="rlbs04" href="./SEKIRO.html" onmouseover="RLlittleInforOpen(4)" onmouseout="RLlittleInforClose(4)">4. 只狼：影逝二度
 							<div class="RLBS" id="RLBS04">
 								<img style="float: left;" src="../images/LittlePic/SEKIRO.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px;"><br>&nbsp;&nbsp;&nbsp;SEKIRO<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.6</span>
@@ -250,7 +251,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs05" href="" onmouseover="RLlittleInforOpen(5)" onmouseout="RLlittleInforClose(5)">5. 女神异闻录5
+						<a class="rlbs" id="rlbs05" href="./Persiona5.html" onmouseover="RLlittleInforOpen(5)" onmouseout="RLlittleInforClose(5)">5. 女神异闻录5
 							<div class="RLBS" id="RLBS05">
 								<img style="float: left;" src="../images/LittlePic/Persona 5.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px;"><br>&nbsp;&nbsp;&nbsp;Persona5<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.6</span>
@@ -258,7 +259,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs06" href="" onmouseover="RLlittleInforOpen(6)" onmouseout="RLlittleInforClose(6)">6. 战神
+						<a class="rlbs" id="rlbs06" href="./GodofWar4.html" onmouseover="RLlittleInforOpen(6)" onmouseout="RLlittleInforClose(6)">6. 战神
 							<div class="RLBS" id="RLBS06">
 								<img style="float: left;" src="../images/LittlePic/God of War 4.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px;"><br>&nbsp;&nbsp;&nbsp;God of War<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.6</span>
@@ -266,7 +267,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs07" href="" onmouseover="RLlittleInforOpen(7)" onmouseout="RLlittleInforClose(7)">7. 侠盗猎车手5
+						<a class="rlbs" id="rlbs07" href="./Grand5.html" onmouseover="RLlittleInforOpen(7)" onmouseout="RLlittleInforClose(7)">7. 侠盗猎车手5
 							<div class="RLBS" id="RLBS07">
 								<img style="float: left;" src="../images/LittlePic/Grand Theft Auto 5.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px; line-height: 28px;">&nbsp;&nbsp;Grand Theft<br>&nbsp; Auto V<br>&nbsp;&nbsp;IGN SCORE: 9.6</span>
@@ -274,7 +275,7 @@
 						</a>
 					</li>
 					<li>
-						<a class="rlbs" id="rlbs08" href="" onmouseover="RLlittleInforOpen(8)" onmouseout="RLlittleInforClose(8)">8.超级玛丽欧创作家2
+						<a class="rlbs" id="rlbs08" href="MarioMaker2.html" onmouseover="RLlittleInforOpen(8)" onmouseout="RLlittleInforClose(8)">8.超级玛丽欧创作家2
 							<div class="RLBS" id="RLBS08">
 								<img style="float: left;" src="../images/LittlePic/Super Mario Maker 2.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px; line-height: 28px;">&nbsp;&nbsp;&nbsp;Super Mario<br>&nbsp;&nbsp;&nbsp;Maker2<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 9.5</span>
@@ -287,7 +288,7 @@
 				<ul style="list-style: none;">
 					<span style="font-size: 20px; color: #F5E871;" >Most Popular</span>
 					<li>
-						<a class="rlmp" id="rlmp01" href="" onmouseover="MPlittleInforOpen(1)" onmouseout="MPlittleInforClose(1)">1. 塞尔达传说：旷野之息
+						<a class="rlmp" id="rlmp01" href="./Zeld.html" onmouseover="MPlittleInforOpen(1)" onmouseout="MPlittleInforClose(1)">1. 塞尔达传说：旷野之息
 							<div class="RLMP" id="RLMP01">
 								<img style="float: left;" src="../images/LittlePic/Breathe of Wild.png" height="80px">
 								<span style="font-size: 16px; margin-top: 20px;"><br>&nbsp;&nbsp;&nbsp;Legend of Zeld<br>&nbsp;&nbsp;&nbsp;IGN SCORE: 10.0</span>

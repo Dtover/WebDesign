@@ -2,8 +2,9 @@ function LoginFunction(){
 	var name = document.getElementsByClassName("username")[0].value;
 	var pwd = document.getElementsByClassName("pwd")[0].value;
 	if(pwd == localStorage.getItem(name)){
+		localStorage.setItem("currentuser", name);
 		//open new link in current page	
-		setTimeout(function(){ window.location.href = "../Mainpage/GameList.html"; }, 300);
+		setTimeout(function(){ window.location.href = "../Mainpage/SwitchGL.html"; }, 300);
 		//open new link in new page
 		//window.open("../Mainpage/GameList.html");
 	}else{

@@ -92,10 +92,10 @@ body{
 	margin-left: 650px;
 	margin-top: -80px;
 }
-.Username{
+#User{
+	text-align: center;
  	font-size: 25px; 
 	font-weight: bold;
-	margin-left: 645px;
 }
 .Word{
 	margin-top: 5px;
