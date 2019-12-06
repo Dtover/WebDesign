@@ -4,9 +4,11 @@ function openNav() {
 		document.getElementById("mySidenav").style.width = "0";
 		document.getElementById("MenuBtn").style.margin = "0px auto auto 0px";
 		document.getElementById("GamePart").style.margin = "10px auto auto 100px";
+		document.getElementById("RankingList").style.width = "240px";
 		
 	}else{
 		document.getElementById("mySidenav").style.width = "220px";
+		document.getElementById("RankingList").style.width = "0";
 		document.getElementById("MenuBtn").style.margin = "0px auto auto 220px";
 		document.getElementById("GamePart").style.margin = "10px auto auto 340px";
 	}
