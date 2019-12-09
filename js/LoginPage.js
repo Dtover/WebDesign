@@ -3,6 +3,7 @@ function LoginFunction(){
 	var pwd = document.getElementsByClassName("pwd")[0].value;
 	if(pwd == localStorage.getItem(name)){
 		localStorage.setItem("currentuser", name);
+		localStorage.setItem("gamecounter", 0);
 		//open new link in current page	
 		setTimeout(function(){ window.location.href = "../Mainpage/SwitchGL.html"; }, 300);
 		//open new link in new page
