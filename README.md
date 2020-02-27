@@ -13,4 +13,3 @@ I make all functions work just in condition of using html, css. javascript.
 
 #### Preview
 
-You can preview it in [GIC](http://47.99.77.16) 
